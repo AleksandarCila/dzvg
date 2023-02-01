@@ -11,13 +11,15 @@ import {
 } from "@chakra-ui/react";
 import { PrimaryButton } from "../Button";
 
+import Link from "next/link";
+
 type SectionProps = {
   title: string;
   text: string;
   imageSrc: string;
   cta: string;
   href: string;
-  direction?: 'row' | 'row-reverse'
+  direction?: "row" | "row-reverse";
 };
 
 export const Section: FC<SectionProps> = ({
@@ -26,7 +28,7 @@ export const Section: FC<SectionProps> = ({
   imageSrc,
   cta,
   href,
-  direction = 'row'
+  direction = "row",
 }) => {
   return (
     <Flex
@@ -34,7 +36,6 @@ export const Section: FC<SectionProps> = ({
       justify="center"
       align="center"
       direction={{ base: "column", lg: direction }}
-      
     >
       <Box width={{ base: "100%", lg: "50%" }}>
         <Image
@@ -58,7 +59,9 @@ export const Section: FC<SectionProps> = ({
         <Heading as="h5">{title}</Heading>
         <Divider width="100px" borderColor="primary.100" borderWidth={3} />
         <Text>{text}</Text>
-        <PrimaryButton>{cta}</PrimaryButton>
+        <Link href={href} style={{ width: "100%" }}>
+          <PrimaryButton width="100%">{cta}</PrimaryButton>
+        </Link>
       </Stack>
     </Flex>
   );

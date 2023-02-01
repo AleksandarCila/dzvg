@@ -1,4 +1,5 @@
 export * from './Home'
 export * from './PhoneContacts'
 export * from './Service'
+export * from './SluzbeHome'
 export * from './HealthCalendar'
