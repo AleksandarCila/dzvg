@@ -15,7 +15,7 @@ export const Home = () => {
     <div>
       <Hero />
       <MainActionBar />
-      <Divider my={5} width="100%" borderWidth={1} />
+      <Divider my={5} width="100%" borderBottomWidth={3} />
       <PageContainer>
         <SluzbeSection />
         <ProveraLekaraSection />

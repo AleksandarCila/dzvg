@@ -1,11 +1,18 @@
-import { m } from "framer-motion";
-import { ServiceType } from "./../types";
+import { ServiceType } from "./types";
 
-export const sluzbe: ServiceType[] = [
-  {
+type SluzbeObject = {
+  opsta_medicina:ServiceType,
+  zz_dece_zena_i_dentalna_medicina:ServiceType,
+  radiologija_laboratorija_i_specijalisticka_delatnost:ServiceType,
+  pravno_ekonomsko_tehnicka:ServiceType,
+  [key:string]: ServiceType
+}
+
+export const sluzbe:SluzbeObject = {
+  opsta_medicina: {
     key: "opsta_medicina",
     name: "Служба за здравствену заштиту одраслог становништва са хитном медисинком помоћи, кућним лечењем и поливалентном патронажом",
-    images: [],
+    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
     nacelnik: "Др Недељко Васић",
     odgovorniTehnicar: "Горан Бирташевић",
     phones: [
@@ -83,17 +90,17 @@ export const sluzbe: ServiceType[] = [
     ],
     odeljenja: [],
   },
-  {
+  zz_dece_zena_i_dentalna_medicina: {
     key: "zz_dece_zena_i_dentalna_medicina",
     name: "Служба за здравствену заштиту деце, школске деце, жена и зз из области денталне медицине",
     nacelnik: "Др Виолета Недић ",
     odgovorniTehnicar: "Слађана Ивковић ",
-    images:[],
+    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
     phones: [],
     izabraniLekari: [],
     odeljenja: [
       {
-        name: "Oдељење зз деце и школске деце",
+        name: "Oдељење за здравствену заштиту деце и школске деце",
         phones: [
           {
             number: "012/7160-701",
@@ -173,10 +180,10 @@ export const sluzbe: ServiceType[] = [
     ],
   },
 
-  {
+  radiologija_laboratorija_i_specijalisticka_delatnost: {
     key: "radiologija_laboratorija_i_specijalisticka_delatnost",
     name: "Служба за радиолошку и лабораторијску дијагностику и специјалистичко консултативну делатност",
-    images: [],
+    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
     nacelnik: "Др Мирослав Мирковић",
     odgovorniTehnicar: "Никола Вуликић",
     phones: [],
@@ -252,11 +259,11 @@ export const sluzbe: ServiceType[] = [
       },
     ],
   },
-  {
+  pravno_ekonomsko_tehnicka: {
     key: "pravno_ekonomsko_tehnicka",
     name: "Служба за правне, економско-финансијске, техничке и друге сличне послове",
     nacelnik: "Милан Баралић",
-    images: [],
+    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
     phones: [
       {
         type: "фиксни",
@@ -266,4 +273,4 @@ export const sluzbe: ServiceType[] = [
     izabraniLekari: [],
     odeljenja: [],
   },
-];
+};

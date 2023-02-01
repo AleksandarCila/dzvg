@@ -24,6 +24,8 @@ import {
 
 import { PrimaryButton } from "@/components/generic";
 
+import { NAV_ITEMS, NavItem } from "./links";
+
 export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -55,9 +57,7 @@ export const Navbar = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            color={useColorModeValue("gray.800", "white")}
-          >
+          <Text color={useColorModeValue("gray.800", "white")}>
             Дом Здравља Велико Градиште
           </Text>
 
@@ -66,11 +66,7 @@ export const Navbar = () => {
           </Flex>
         </Flex>
 
-        <Stack
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
+        <Stack justify={"flex-end"} direction={"row"} spacing={6}>
           <PrimaryButton
             as={"a"}
             fontSize="sm"
@@ -191,7 +187,7 @@ const MobileNav = () => {
         fontSize="sm"
         variant={"link"}
         py={2}
-        fontWeight='extrabold'
+        fontWeight="extrabold"
       >
         Електронско Заказивање
       </PrimaryButton>
@@ -252,62 +248,3 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   );
 };
 
-interface NavItem {
-  label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
-  href?: string;
-}
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: "Насловна",
-    href: "/",
-  },
-  {
-    label: "Службе",
-    children: [
-      {
-        label:
-          "Cлужба за здравствену заштиту одраслог становништва са хитном медисинком помоћи, кућним лечењем и поливалентном патронажом",
-        href: "#",
-      },
-      {
-        label:
-          "Cлужба за здравствену заштиту деце, школске деце, жена и ЗЗ из области денталне медицине",
-        href: "#",
-      },
-      {
-        label:
-          "Cлужба за радиолошку и лабораторијску дијагностику и специјалистичко консултативну делатност",
-        href: "#",
-      },
-      {
-        label:
-          "Cлужба за правне, економско-финансијске, техничке и друге сличне послове",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Информације",
-    href: "#",
-  },
-  {
-    label: "Остало",
-    children: [
-      {
-        label: "Телефонски именик",
-        href: "/telefonski_imenik",
-      },
-      {
-        label: "Календар здравља",
-        href: "#",
-      },
-      {
-        label: "О нама",
-        href: "#",
-      },
-    ],
-  },
-];
