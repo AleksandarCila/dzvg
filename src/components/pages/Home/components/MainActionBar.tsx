@@ -23,7 +23,7 @@ export const MainActionBar = () => {
         title="Радно време"
         text="Радно време служби Дома Здравља Велико Градиште и амбуланти Средњево и Мајиловац"
         imageSrc="/images/work_hours.png"
-        href="/"
+        href="/radno_vreme"
       />
       <ActionCard
         title="Мој Доктор"

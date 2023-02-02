@@ -128,7 +128,7 @@ export const sluzbe:SluzbeObject = {
         ],
       },
       {
-        name: "Oдсек за здраствену заштиту жена",
+        name: "Oдсек за здравствену заштиту жена",
         rukovodilac: "Др Јелена Штрбац",
         phones: [
           {

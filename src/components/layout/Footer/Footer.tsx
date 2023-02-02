@@ -43,13 +43,12 @@ export const Footer = () => {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Дом Здравља</ListHeader>
-            <Link href={"#"}>Радно време</Link>
+            <Link href={"/radno_vreme"}>Радно време</Link>
             <Link href={"/telefonski_imenik"}>Телефонски именик</Link>
             <Link href={"/sluzbe"}>Службе</Link>
             <Link href={"#"}>Информације</Link>
-            <Link href={"#"}>О нама</Link>
+            <Link href={"/o_nama"}>О нама</Link>
             <Link href={"#"}>Документи</Link>
-
           </Stack>
 
           <Stack align={"flex-start"}>
@@ -75,10 +74,11 @@ export const Footer = () => {
             flexGrow: 1,
             ml: 8,
           }}
-        ></Flex>
-        <Text pt={6} fontSize={"sm"} textAlign={"center"}>
-          {`© ${new Date().getFullYear()} - Дом Здравља Велико Градиште`}
-        </Text>
+        >
+          <Text p={6} fontSize={"sm"} textAlign={"center"}>
+            {`© ${new Date().getFullYear()} - Дом Здравља Велико Градиште`}
+          </Text>
+        </Flex>
       </Box>
     </Box>
   );

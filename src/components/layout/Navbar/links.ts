@@ -50,6 +50,10 @@ export const NAV_ITEMS: Array<NavItem> = [
         href: "/telefonski_imenik",
       },
       {
+        label: "Радно време",
+        href: "/radno_vreme",
+      },
+      {
         label: "Календар здравља",
         href: "/kalendar_zdravlja",
       },
@@ -59,7 +63,7 @@ export const NAV_ITEMS: Array<NavItem> = [
       },
       {
         label: "О нама",
-        href: "#",
+        href: "/o_nama",
       },
     ],
   },
