@@ -3,7 +3,7 @@ import { colors } from "../styles";
 
 import type { AppProps } from "next/app";
 
-import { Navbar } from "../components";
+import { Footer, Navbar } from "../components";
 
 import { Montserrat, Manrope } from "@next/font/google";
 
@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={`${montserrat.className} ${manrope.className}`}>
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </main>
     </ChakraProvider>
   );

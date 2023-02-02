@@ -54,6 +54,10 @@ export const NAV_ITEMS: Array<NavItem> = [
         href: "/kalendar_zdravlja",
       },
       {
+        label: "Документи",
+        href: "/dokumenti",
+      },
+      {
         label: "О нама",
         href: "#",
       },
