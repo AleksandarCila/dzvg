@@ -15,11 +15,11 @@ const theme = extendTheme({ colors });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <main className={`${montserrat.className} ${manrope.className}`}>
-        <Navbar />
+      <Navbar />
+      <main className={`${montserrat.className} ${manrope.className}`} style={{minHeight:'50vh'}}>
         <Component {...pageProps} />
-        <Footer />
       </main>
+      <Footer />
     </ChakraProvider>
   );
 }

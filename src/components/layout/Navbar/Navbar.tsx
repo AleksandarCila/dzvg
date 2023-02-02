@@ -25,12 +25,13 @@ import {
 import { PrimaryButton } from "@/components/generic";
 
 import { NAV_ITEMS, NavItem } from "./links";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <nav>
       <Flex
         bg={"white"}
         color={"gray.600"}
@@ -83,11 +84,12 @@ export const Navbar = () => {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
-    </Box>
+    </nav>
   );
 };
 
 const DesktopNav = () => {
+  const {pathname} = useRouter();
   const linkColor = "gray.500";
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
@@ -103,7 +105,7 @@ const DesktopNav = () => {
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={linkColor}
+                color={pathname===navItem.href ? 'primary.200' : linkColor}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
@@ -144,13 +146,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      _hover={{ bg: useColorModeValue("purple.50", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "primary.200" }}
             fontWeight={500}
           >
             {label}
@@ -166,7 +168,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           align={"center"}
           flex={1}
         >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
+          <Icon color={"primary.200"} w={5} h={5} as={ChevronRightIcon} />
         </Flex>
       </Stack>
     </Link>
@@ -200,6 +202,9 @@ const MobileNav = () => {
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
+  const {pathname} = useRouter();
+  const isActive = pathname === href;
+
   return (
     <Stack spacing={4} onClick={children && onToggle}>
       <Flex
@@ -214,7 +219,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       >
         <Text
           fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
+          color={isActive ? 'primary.200' : 'grey.600'}
         >
           {label}
         </Text>
