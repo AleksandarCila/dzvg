@@ -1,9 +1,21 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Image, Divider, Heading, Icon, Text } from "@chakra-ui/react";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { HiOutlineMail } from "react-icons/hi";
 
 export const Hero = () => {
   return (
-    <Flex height={"500px"} width="100%" direction="column" alignItems="center">
-      <Flex height="100%" width="100%" justify={"center"}>
+    <Flex
+      // height={"500px"}
+      width="100%"
+      direction={{ base: "column", lg: "row" }}
+      alignItems="center"
+      bgColor="primary.200"
+    >
+      <Flex
+        height="500px"
+        width={{ base: "100%", lg: "70%" }}
+        justify={"center"}
+      >
         <Image
           alt="Дом Здравља Велико Градиште"
           objectFit="cover"
@@ -12,6 +24,22 @@ export const Hero = () => {
           height="100%"
           objectPosition={["top center"]}
         />
+      </Flex>
+      <Flex p={5} justifyContent="center" flexDirection="column" color="white">
+        <Heading as="h1">Дом Здравља Велико Градиште</Heading>
+        <Divider borderBottomWidth={2} borderColor="whiteAlpha.500" my={5} />
+        <Flex gap={5} justifyContent="flex-start" alignItems="center">
+          <Icon color="white" fontSize="xl">
+            <BsFillTelephoneFill />
+          </Icon>
+          <Text fontSize="xl">012/662-591</Text>
+        </Flex>
+        <Flex gap={5} justifyContent="flex-start" alignItems="center" py={5}>
+          <Icon color="white" fontSize="xl">
+            <HiOutlineMail />
+          </Icon>
+          <Text fontSize="xl">info@dzvg.rs</Text>
+        </Flex>
       </Flex>
     </Flex>
   );

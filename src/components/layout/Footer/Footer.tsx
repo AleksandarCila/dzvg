@@ -37,7 +37,7 @@ export const Footer = () => {
             </Stack>
             <Stack align={"flex-start"}>
               <ListHeader>Корисни линкови</ListHeader>
-              <Link href={"#"}>Мој Доктор</Link>
+              <Link href={"https://www.mojdoktor.gov.rs/map"}>Мој Доктор</Link>
               <Link href={"/izabrani_lekar"}>Провера изабраног лекара</Link>
               <Link href={"/elektronsko_zakazivanje"}>
                 Електронско заказивање
@@ -66,14 +66,14 @@ export const Footer = () => {
             _before={{
               content: '""',
               borderBottom: "1px solid",
-              borderColor: useColorModeValue("gray.200", "gray.700"),
+              borderColor: useColorModeValue("primary.100", "gray.700"),
               flexGrow: 1,
               mr: 8,
             }}
             _after={{
               content: '""',
               borderBottom: "1px solid",
-              borderColor: useColorModeValue("gray.200", "gray.700"),
+              borderColor: useColorModeValue("primary.100", "gray.700"),
               flexGrow: 1,
               ml: 8,
             }}

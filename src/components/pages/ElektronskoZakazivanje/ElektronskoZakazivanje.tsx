@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { PrimaryButton, Title } from "@/components/generic";
 import { PageContainer } from "@/components/layout";
+import Link from "next/link";
 
 export const ElektronskoZakazivanje = () => {
   return (
@@ -26,7 +27,9 @@ export const ElektronskoZakazivanje = () => {
           Приступите платформи Мој Доктор кликом на дугме.
         </Text>
         <Flex width="100%" justifyContent="center" alignItems="center" my={5}>
-          <PrimaryButton>Мој Доктор</PrimaryButton>
+          <Link href="https://www.mojdoktor.gov.rs/map">
+            <PrimaryButton>Мој Доктор</PrimaryButton>
+          </Link>
         </Flex>
       </Box>
     </PageContainer>
