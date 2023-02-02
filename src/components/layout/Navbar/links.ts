@@ -14,7 +14,6 @@ export const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Службе",
-    href:"/sluzbe",
     children: [
       {
         label:
@@ -52,6 +51,10 @@ export const NAV_ITEMS: Array<NavItem> = [
       {
         label: "Радно време",
         href: "/radno_vreme",
+      },
+      {
+        label: "Провера изабраног лекара",
+        href: "/izabrani_lekar",
       },
       {
         label: "Календар здравља",

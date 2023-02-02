@@ -67,15 +67,16 @@ export const Navbar = () => {
         </Flex>
 
         <Stack justify={"flex-end"} direction={"row"} spacing={6}>
-          <PrimaryButton
-            as={"a"}
-            fontSize="sm"
-            variant={"link"}
-            fontWeight={600}
-            display={{ base: "none", md: "inline-flex" }}
-          >
-            Ел. Заказивање
-          </PrimaryButton>
+          <Link href="/elektronsko_zakazivanje">
+            <PrimaryButton
+              fontSize="sm"
+              variant={"link"}
+              fontWeight={600}
+              display={{ base: "none", md: "inline-flex" }}
+            >
+              Ел. Заказивање
+            </PrimaryButton>
+          </Link>
         </Stack>
       </Flex>
 
@@ -182,15 +183,16 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-      <PrimaryButton
-        as={"a"}
-        fontSize="sm"
-        variant={"link"}
-        py={2}
-        fontWeight="extrabold"
-      >
-        Електронско Заказивање
-      </PrimaryButton>
+      <Link href="/elektronsko_zakazivanje">
+        <PrimaryButton
+          fontSize="sm"
+          variant={"link"}
+          py={2}
+          fontWeight="extrabold"
+        >
+          Електронско Заказивање
+        </PrimaryButton>
+      </Link>
     </Stack>
   );
 };
@@ -247,4 +249,3 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
     </Stack>
   );
 };
-

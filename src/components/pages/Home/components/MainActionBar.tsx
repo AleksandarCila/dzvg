@@ -29,7 +29,7 @@ export const MainActionBar = () => {
         title="Мој Доктор"
         text="Упутство за заказивање прегледа помоћу платформе Мој Доктор"
         imageSrc="/images/my_doctor.png"
-        href="/"
+        href="/elektronsko_zakazivanje"
       />
     </Flex>
   );

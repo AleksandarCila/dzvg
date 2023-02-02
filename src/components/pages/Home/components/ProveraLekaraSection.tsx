@@ -9,7 +9,7 @@ export const ProveraLekaraSection = () => {
       text="Проверу изабраног лекара можете извршити пратећи упутства која можете добити кликом на дугме испод."
       imageSrc="/images/sluzbe.jpg"
       cta="Сазнајте више"
-      href=""
+      href="/izabrani_lekar"
       direction="row-reverse"
     />
   );

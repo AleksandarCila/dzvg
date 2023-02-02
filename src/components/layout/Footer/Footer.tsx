@@ -37,6 +37,7 @@ export const Footer = () => {
           <Stack align={"flex-start"}>
             <ListHeader>Корисни линкови</ListHeader>
             <Link href={"#"}>Мој Доктор</Link>
+            <Link href={"/izabrani_lekar"}>Провера изабраног лекара</Link>
             <Link href={"#"}>Електронско заказивање</Link>
 
             <Link href={"/kalendar_zdravlja"}>Календар здравља</Link>
