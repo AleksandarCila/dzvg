@@ -58,9 +58,11 @@ export const Navbar = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text color={useColorModeValue("gray.800", "white")}>
-            Дом Здравља Велико Градиште
-          </Text>
+          <Link href="/" _hover={{ textDecoration: "none" }}>
+            <Text color={useColorModeValue("gray.800", "white")} fontSize='lg'>
+              Дом Здравља Велико Градиште
+            </Text>
+          </Link>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -89,7 +91,7 @@ export const Navbar = () => {
 };
 
 const DesktopNav = () => {
-  const {pathname} = useRouter();
+  const { pathname } = useRouter();
   const linkColor = "gray.500";
   const linkHoverColor = useColorModeValue("gray.800", "white");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
@@ -105,7 +107,7 @@ const DesktopNav = () => {
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={pathname===navItem.href ? 'primary.200' : linkColor}
+                color={pathname === navItem.href ? "primary.200" : linkColor}
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,
@@ -185,14 +187,14 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-      <Link href="/elektronsko_zakazivanje" style={{textDecoration:'none'}}>
+      <Link href="/elektronsko_zakazivanje" style={{ textDecoration: "none" }}>
         <PrimaryButton
           fontSize="sm"
           variant="solid"
           py={2}
           my={2}
           fontWeight="bold"
-          width={{base:'100%', sm:'max-content'}}
+          width={{ base: "100%", sm: "max-content" }}
         >
           Електронско Заказивање
         </PrimaryButton>
@@ -204,7 +206,7 @@ const MobileNav = () => {
 const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
-  const {pathname} = useRouter();
+  const { pathname } = useRouter();
   const isActive = pathname === href;
 
   return (
@@ -219,10 +221,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           textDecoration: "none",
         }}
       >
-        <Text
-          fontWeight={600}
-          color={isActive ? 'primary.200' : 'grey.600'}
-        >
+        <Text fontWeight={600} color={isActive ? "primary.200" : "grey.600"}>
           {label}
         </Text>
         {children && (
