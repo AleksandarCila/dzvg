@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { Service } from "@/components";
 
-import { sluzbe } from "@/data";
+import { sluzbe,SluzbeObject } from "@/data";
 
 const Sluzbe = () => {
   const router = useRouter();
@@ -31,5 +31,20 @@ const Sluzbe = () => {
     </>
   );
 };
+
+export async function getStaticPaths() {
+  // Read the JSON file
+
+  // Get the IDs from the data
+  const ids = Object.keys(sluzbe)
+
+  // Create an array of paths
+  const paths = ids.map(id => ({
+    params: { id: id.toString() }
+  }))
+
+  // Return the paths
+  return { paths, fallback: false }
+}
 
 export default Sluzbe;

@@ -1,6 +1,6 @@
 import { ServiceType } from "./types";
 
-type SluzbeObject = {
+export type SluzbeObject = {
   opsta_medicina:ServiceType,
   zz_dece_zena_i_dentalna_medicina:ServiceType,
   radiologija_laboratorija_i_specijalisticka_delatnost:ServiceType,
