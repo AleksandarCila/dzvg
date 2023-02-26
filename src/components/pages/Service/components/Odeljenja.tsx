@@ -33,9 +33,13 @@ const Odeljenje: FC<OdeljenjeProps> = ({ odeljenje }) => {
         borderColor="primary.200"
       />
       <Doctor title="Руководилац одељења: ">
-        {odeljenje.rukovodilac?.name}
-        {odeljenje.rukovodilac?.title !== "" && (
-          <p>({odeljenje.rukovodilac?.title})</p>
+        {odeljenje.rukovodilac && (
+          <>
+            {odeljenje.rukovodilac?.name !== "" && odeljenje.rukovodilac?.name}
+            {odeljenje.rukovodilac?.title !== "" && (
+              <p>({odeljenje.rukovodilac?.title})</p>
+            )}
+          </>
         )}
       </Doctor>
       <Kontakt phones={odeljenje.phones} />
