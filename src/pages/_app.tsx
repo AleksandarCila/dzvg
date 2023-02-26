@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Navbar />
-      <main className={`${montserrat.className} ${manrope.className}`} style={{minHeight:'50vh'}}>
+      <main className={`${montserrat.className} ${manrope.className}`} style={{minHeight:'50vh', marginBottom:"20px"}}>
         <Component {...pageProps} />
       </main>
       <Footer />

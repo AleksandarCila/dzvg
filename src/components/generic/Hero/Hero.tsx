@@ -9,7 +9,7 @@ export const Hero = () => {
       width="100%"
       direction={{ base: "column", lg: "row" }}
       alignItems="center"
-      bgColor="primary.200"
+      bgColor="whitesmoke"
     >
       <Flex
         height="500px"
@@ -25,17 +25,17 @@ export const Hero = () => {
           objectPosition={["top center"]}
         />
       </Flex>
-      <Flex p={5} justifyContent="center" flexDirection="column" color="white">
+      <Flex p={5} justifyContent="center" flexDirection="column" color="black">
         <Heading as="h1">Дом Здравља Велико Градиште</Heading>
         <Divider borderBottomWidth={2} borderColor="whiteAlpha.500" my={5} />
         <Flex gap={5} justifyContent="flex-start" alignItems="center">
-          <Icon color="white" fontSize="xl">
+          <Icon  fontSize="xl">
             <BsFillTelephoneFill />
           </Icon>
           <Text fontSize="xl">012/662-591</Text>
         </Flex>
         <Flex gap={5} justifyContent="flex-start" alignItems="center" py={5}>
-          <Icon color="white" fontSize="xl">
+          <Icon  fontSize="xl">
             <HiOutlineMail />
           </Icon>
           <Text fontSize="xl">info@dzvg.rs</Text>

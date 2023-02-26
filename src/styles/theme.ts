@@ -16,6 +16,7 @@ export const colors = {
     900: "#ba68bc",
   },
   secondary:{
+    50:"#fff3e7",
     100:"#FFEEDD"
   }
 };
