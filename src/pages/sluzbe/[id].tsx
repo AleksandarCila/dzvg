@@ -7,9 +7,10 @@ import { Service } from "@/components";
 
 import { sluzbe,SluzbeObject } from "@/data";
 
-const Sluzbe = () => {
+const Sluzbe = ({item}:{item:string}) => {
   const router = useRouter();
-  const { id } = router.query;
+  // const { id } = router.query;
+  const id = item;
 
   const service = useMemo(() => {
     if (id !== undefined && typeof id === "string") {
@@ -45,6 +46,14 @@ export async function getStaticPaths() {
 
   // Return the paths
   return { paths, fallback: false }
+}
+
+export async function getStaticProps({ params }:{params:any}) {
+  // Find the item with the specified ID
+  const item = Object.keys(sluzbe).find(item => item === params.id)
+
+  // Return the props for the component
+  return { props: { item } }
 }
 
 export default Sluzbe;
