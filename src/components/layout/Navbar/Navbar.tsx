@@ -185,12 +185,14 @@ const MobileNav = () => {
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
-      <Link href="/elektronsko_zakazivanje">
+      <Link href="/elektronsko_zakazivanje" style={{textDecoration:'none'}}>
         <PrimaryButton
           fontSize="sm"
-          variant={"link"}
+          variant="solid"
           py={2}
-          fontWeight="extrabold"
+          my={2}
+          fontWeight="bold"
+          width={{base:'100%', sm:'max-content'}}
         >
           Електронско Заказивање
         </PrimaryButton>

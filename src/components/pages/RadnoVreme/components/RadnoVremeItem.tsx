@@ -12,8 +12,12 @@ type WorkingHoursProps = {
 
 export const WorkingHours: FC<WorkingHoursProps> = ({ name, time }) => {
   return (
-    <Flex width="100%" justifyContent="flex-start" alignItems="center">
-      <Text>{name}</Text>
+    <Flex
+      width="100%"
+      justifyContent={{ base: "space-between", md: "flex-start" }}
+      alignItems="center"
+    >
+      <Text width={{ base: "150px", md: "250px" }}>{name}</Text>
       <Text fontWeight="bold" ml={5}>
         {time}
       </Text>

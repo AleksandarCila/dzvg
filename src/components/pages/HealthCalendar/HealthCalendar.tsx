@@ -20,8 +20,11 @@ const DayComponent: FC<DayComponentProps> = ({ day }) => {
     >
       <Text fontWeight="bold" mr={2}>
         {day.day}
-      </Text>{" "}
-      - <Text mx={2}>{day.title}</Text>
+      </Text>
+      -{" "}
+      <Text mx={2} textAlign={{ base: "right", md: "left" }} flex={1}>
+        {day.title}
+      </Text>
     </Flex>
   );
 };

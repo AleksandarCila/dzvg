@@ -10,10 +10,10 @@ type MainDoctorProps = {
 export const MainDoctor: FC<MainDoctorProps> = ({ title, children }) => {
   return children ? (
     <Box my={2}>
-      <Heading as="h6" fontWeight="bold">
+      <Heading as="h6" fontWeight="bold" fontSize='xl'>
         {title}
       </Heading>
-      <Text fontStyle="italic" fontSize="xl">
+      <Text fontStyle="italic" fontSize="lg">
         {children}
       </Text>
     </Box>

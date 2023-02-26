@@ -1,12 +1,12 @@
 import { FC } from "react";
 
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Stack } from "@chakra-ui/react";
 
 import { ServiceType } from "@/data";
 import { Carousel, Title } from "@/components/generic";
 import { PageContainer } from "@/components/layout";
 
-import { MainDoctor, Kontakt, IzabraniLekari,Odeljenja } from "./components";
+import { MainDoctor, Kontakt, IzabraniLekari, Odeljenja } from "./components";
 
 type ServiceProps = {
   service: ServiceType;
@@ -15,7 +15,7 @@ type ServiceProps = {
 export const Service: FC<ServiceProps> = ({ service }) => {
   return (
     <PageContainer>
-      <Title title={service.name} />
+      <Title title={service.name} size="sm" />
       <Flex
         justifyContent="space-between"
         alignItems="flex-start"
@@ -30,9 +30,15 @@ export const Service: FC<ServiceProps> = ({ service }) => {
         </Box>
 
         <Box width={{ base: "100%", md: "50%" }} p={5}>
-          <MainDoctor title="Начелник службе: ">{service.nacelnik}</MainDoctor>
+          <MainDoctor title="Начелник службе: ">
+            {service.nacelnik.name}
+            {service.nacelnik.title !== "" && <p>({service.nacelnik.title})</p>}
+          </MainDoctor>
           <MainDoctor title="Одговорни техничар: ">
-            {service.odgovorniTehnicar}
+            {service.odgovorniTehnicar?.name}
+            {service.odgovorniTehnicar?.title !== "" && (
+              <p>({service.odgovorniTehnicar?.title})</p>
+            )}
           </MainDoctor>
           <Kontakt phones={service.phones} />
         </Box>

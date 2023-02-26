@@ -1,20 +1,26 @@
 import { ServiceType } from "./types";
 
 export type SluzbeObject = {
-  opsta_medicina:ServiceType,
-  zz_dece_zena_i_dentalna_medicina:ServiceType,
-  radiologija_laboratorija_i_specijalisticka_delatnost:ServiceType,
-  pravno_ekonomsko_tehnicka:ServiceType,
-  [key:string]: ServiceType
-}
+  opsta_medicina: ServiceType;
+  zz_dece_zena_i_dentalna_medicina: ServiceType;
+  radiologija_laboratorija_i_specijalisticka_delatnost: ServiceType;
+  pravno_ekonomsko_tehnicka: ServiceType;
+  [key: string]: ServiceType;
+};
 
-export const sluzbe:SluzbeObject = {
+export const sluzbe: SluzbeObject = {
   opsta_medicina: {
     key: "opsta_medicina",
     name: "Служба за здравствену заштиту одраслог становништва са хитном медисинком помоћи, кућним лечењем и поливалентном патронажом",
-    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
-    nacelnik: "Др Недељко Васић",
-    odgovorniTehnicar: "Горан Бирташевић",
+    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
+    nacelnik: {
+      name: "Др Недељко Васић",
+      title: "Специјалиста опште медицине",
+    },
+    odgovorniTehnicar: {
+      name: "Горан Бирташевић",
+      title: "Високи струковни техничар",
+    },
     phones: [
       {
         number: "194 или 012/662-591",
@@ -93,9 +99,12 @@ export const sluzbe:SluzbeObject = {
   zz_dece_zena_i_dentalna_medicina: {
     key: "zz_dece_zena_i_dentalna_medicina",
     name: "Служба за здравствену заштиту деце, школске деце, жена и зз из области денталне медицине",
-    nacelnik: "Др Виолета Недић ",
-    odgovorniTehnicar: "Слађана Ивковић ",
-    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
+    nacelnik: { name: "Др Виолета Недић ", title: "Специјалиста педијатрије" },
+    odgovorniTehnicar: {
+      name: "Слађана Ивковић ",
+      title: "Медицински техничар",
+    },
+    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
     phones: [],
     izabraniLekari: [],
     odeljenja: [
@@ -129,7 +138,10 @@ export const sluzbe:SluzbeObject = {
       },
       {
         name: "Oдсек за здравствену заштиту жена",
-        rukovodilac: "Др Јелена Штрбац",
+        rukovodilac: {
+          name: "Др Јелена Штрбац",
+          title: "Специјалиста гинекологије и акушерства",
+        },
         phones: [
           {
             type: "фиксни",
@@ -153,7 +165,7 @@ export const sluzbe:SluzbeObject = {
       },
       {
         name: "Oдељење денталне медицине",
-        rukovodilac: "Др Миланка Петровић",
+        rukovodilac: {name:"Др Миланка Петровић",title:""},
         phones: [
           {
             number: "012/7160-703",
@@ -183,15 +195,15 @@ export const sluzbe:SluzbeObject = {
   radiologija_laboratorija_i_specijalisticka_delatnost: {
     key: "radiologija_laboratorija_i_specijalisticka_delatnost",
     name: "Служба за радиолошку и лабораторијску дијагностику и специјалистичко консултативну делатност",
-    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
-    nacelnik: "Др Мирослав Мирковић",
-    odgovorniTehnicar: "Никола Вуликић",
+    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
+    nacelnik: {name:"",title:""},
+    odgovorniTehnicar: {name:"Никола Вуликић",title:"Лабораторијски техничар"},
     phones: [],
     izabraniLekari: [],
     odeljenja: [
       {
         name: "Oдељење лабораторијске дијагностике",
-        rukovodilac: "Др Маја Ивановић",
+        rukovodilac: {name:"Др Маја Ивановић",title:"Специјалиста клиничке биохемије"},
         phones: [
           {
             type: "фиксни",
@@ -239,7 +251,7 @@ export const sluzbe:SluzbeObject = {
       },
       {
         name: "Oдсек за радиолошку дијагностику",
-        rukovodilac: "Др Оливера Радуловић",
+        rukovodilac: {name:"Др Оливера Радуловић",title:"Специјалиста радиологије"},
         phones: [
           {
             type: "фиксни",
@@ -262,8 +274,8 @@ export const sluzbe:SluzbeObject = {
   pravno_ekonomsko_tehnicka: {
     key: "pravno_ekonomsko_tehnicka",
     name: "Служба за правне, економско-финансијске, техничке и друге сличне послове",
-    nacelnik: "Милан Баралић",
-    images: ['/images/sluzbe.jpg','/images/sluzbe.jpg','/images/sluzbe.jpg',],
+    nacelnik: {name:"Милан Баралић",title:""},
+    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
     phones: [
       {
         type: "фиксни",

@@ -30,8 +30,8 @@ export const Footer = () => {
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
             <Stack align={"flex-start"}>
               <ListHeader>Дом Здравља Велико Градиште</ListHeader>
-              <Text>Војводе Путника 1, 12220 Велико Градиште</Text>
-              <Text>012/662-240</Text>
+              <Text>Војводе Путника 28, 12220 Велико Градиште</Text>
+              <Text>012/7160-700</Text>
               <Text>Ж.Р. 840-473661-98</Text>
               <Text>ПИБ: 101364553</Text>
             </Stack>

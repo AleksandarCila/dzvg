@@ -33,6 +33,7 @@ export const Hero = () => {
             <BsFillTelephoneFill />
           </Icon>
           <Text fontSize="xl">012/662-591</Text>
+          <Text fontSize="xl">012/7160-700</Text>
         </Flex>
         <Flex gap={5} justifyContent="flex-start" alignItems="center" py={5}>
           <Icon  fontSize="xl">

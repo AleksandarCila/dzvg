@@ -2,8 +2,8 @@ export type ServiceType = {
     key: string;
     name: string;
     images: string[];
-    nacelnik: string;
-    odgovorniTehnicar?: string;
+    nacelnik: {name:string, title:string};
+    odgovorniTehnicar?: {name:string, title:string};
     phones: { type: string; number: string }[];
     izabraniLekari: {
       name: string;
@@ -11,7 +11,7 @@ export type ServiceType = {
     }[];
     odeljenja: {
       name: string;
-      rukovodilac?: string;
+      rukovodilac?: {name:string, title:string};
       phones: { type: string; number: string }[];
       lekari: {
         name: string;

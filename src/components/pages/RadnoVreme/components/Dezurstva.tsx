@@ -12,8 +12,8 @@ type DezurstvaProps = {
 
 export const Dezurstva: FC<DezurstvaProps> = ({ dezurstva }) => {
   return (
-    <Box py={2}>
-      <Text fontWeight='bold'>Дежурства:</Text>
+    <Box py={2} my={2}>
+      <Text fontWeight='extrabold' my={2}>Дежурства:</Text>
       {dezurstva.map((item, index) => (
         <WorkingHours key={index} name={item.name} time={item.time} />
       ))}

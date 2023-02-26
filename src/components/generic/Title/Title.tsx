@@ -7,7 +7,7 @@ type TitleProps = {
 };
 
 export const Title: FC<TitleProps> = ({ title, size = "lg" }) => {
-  const fontSize = size === "sm" ? "2xl" : "4xl";
+  const fontSize = size === "sm" ? "xl" : "3xl";
   return (
     <div style={{ padding: 20 }}>
       <Heading as="h1" fontSize={fontSize}>
