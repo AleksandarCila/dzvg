@@ -25,25 +25,15 @@ export const Carousel: FC<CarouselProps> = ({ images }) => {
 
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "10px" });
-
+  console.log(images);
   return (
     <Box
       position={"relative"}
       height={"100%"}
       width={"full"}
+      maxW="100%"
       overflow={"hidden"}
     >
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
       {/* Left Icon */}
       <IconButton
         aria-label="left-arrow"
@@ -73,16 +63,21 @@ export const Carousel: FC<CarouselProps> = ({ images }) => {
         <BiRightArrowAlt />
       </IconButton>
       {/* Slider */}
-      <Slider {...settings} ref={(slider) => setSlider(slider)}>
+      <Slider
+        {...settings}
+        ref={(slider) => setSlider(slider)}
+        adaptiveHeight={true}
+        
+      >
         {images.map((url, index) => (
           <Box
             key={index}
-            height={"2xl"}
-            position="relative"
+            height={{base:'lg', md:'xl'}}
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
             backgroundImage={`url(${url})`}
+            maxW="100%"
           />
         ))}
       </Slider>

@@ -38,8 +38,8 @@ export const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: "Информације",
-    href: "#",
+    label: "О нама",
+    href: "/o_nama",
   },
   {
     label: "Остало",
@@ -65,8 +65,8 @@ export const NAV_ITEMS: Array<NavItem> = [
         href: "/dokumenti",
       },
       {
-        label: "О нама",
-        href: "/o_nama",
+        label: "Информације",
+        href: "/informacije",
       },
     ],
   },

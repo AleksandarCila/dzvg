@@ -4,12 +4,13 @@ import { FC } from "react";
 type TitleProps = {
   title: string;
   size?: "sm" | "lg";
+  padding?: number
 };
 
-export const Title: FC<TitleProps> = ({ title, size = "lg" }) => {
+export const Title: FC<TitleProps> = ({ title, size = "lg",padding=20 }) => {
   const fontSize = size === "sm" ? "xl" : "3xl";
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: padding }}>
       <Heading as="h1" fontSize={fontSize}>
         {title}
       </Heading>

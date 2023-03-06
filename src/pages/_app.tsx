@@ -9,6 +9,8 @@ import { Footer, Navbar, ScrollToTop } from "../components";
 
 import { Montserrat, Manrope } from "@next/font/google";
 
+import '../styles/Carousel.css'
+
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
 const manrope = Manrope({ subsets: ["cyrillic"] });
 

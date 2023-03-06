@@ -11,6 +11,7 @@ export type ServiceType = {
     }[];
     odeljenja: {
       name: string;
+      images: string[];
       rukovodilac?: {name:string, title:string};
       phones: { type: string; number: string }[];
       lekari: {

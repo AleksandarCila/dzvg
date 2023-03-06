@@ -13,9 +13,9 @@ export const Doctor: FC<DoctorProps> = ({ title, children }) => {
       <Text fontSize='xl' fontWeight="bold">
         {title}
       </Text>
-      <Text fontStyle="italic" fontSize="md">
+      <Box fontStyle="italic" fontSize="md">
         {children}
-      </Text>
+      </Box>
     </Box>
   ) : null;
 };

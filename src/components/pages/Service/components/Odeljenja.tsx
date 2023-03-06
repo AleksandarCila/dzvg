@@ -1,11 +1,12 @@
 import { FC } from "react";
 
-import { Flex, Text, Divider } from "@chakra-ui/react";
+import { Flex, Text, Divider, Box } from "@chakra-ui/react";
 
 import { ServiceType } from "@/data";
 import { Doctor } from "./Doctor";
 import { Kontakt } from "./Kontakt";
 import { IzabraniLekari } from "./IzabraniLekari";
+import { Carousel, Title } from "@/components/generic";
 
 type OdeljenjeProps = {
   odeljenje: ServiceType["odeljenja"][0];
@@ -23,25 +24,46 @@ const Odeljenje: FC<OdeljenjeProps> = ({ odeljenje }) => {
       width="100%"
       boxShadow="1px 2px 2px #00000060"
     >
-      <Text fontSize="xl" fontWeight="bold">
-        {odeljenje.name}
-      </Text>
-      <Divider
-        my={4}
-        width="100%"
-        borderBottomWidth={2}
-        borderColor="primary.200"
-      />
-      <Doctor title="Руководилац одељења: ">
-        {odeljenje.rukovodilac && (
-          <>
-            {odeljenje.rukovodilac?.name !== "" && odeljenje.rukovodilac?.name}
-            {odeljenje.rukovodilac?.title !== "" && (
-              <p>({odeljenje.rukovodilac?.title})</p>
-            )}
-          </>
+      <Flex
+        justifyContent="space-between"
+        alignItems="flex-start"
+        flexDirection={{ base: "column", md: "row" }}
+        gap={5}
+      >
+        <Flex flexDirection="column" p={{ base: 0, md: 5 }} gap={5} width={{base:"100%", md:"50%"}} flex={1}>
+          <Title title={odeljenje.name} padding={0}/>
+
+          <Divider
+            my={4}
+            width="100%"
+            borderBottomWidth={2}
+            borderColor="primary.200"
+          />
+          <Box>
+            <Doctor title="Руководилац одељења: ">
+              {odeljenje.rukovodilac && (
+                <>
+                  {odeljenje.rukovodilac?.name !== "" &&
+                    odeljenje.rukovodilac?.name}
+                  {odeljenje.rukovodilac?.title !== "" && (
+                    <p>({odeljenje.rukovodilac?.title})</p>
+                  )}
+                </>
+              )}
+            </Doctor>
+          </Box>
+        </Flex>
+
+        {odeljenje.images.length > 0 && (
+          <Box
+            width={{ base: "300px", md: "500px" }}
+            height="350px"
+          >
+            <Carousel images={odeljenje.images} />
+          </Box>
         )}
-      </Doctor>
+      </Flex>
+
       <Kontakt phones={odeljenje.phones} />
       <IzabraniLekari lekari={odeljenje.lekari} />
     </Flex>

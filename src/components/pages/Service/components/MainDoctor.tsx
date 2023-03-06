@@ -13,9 +13,9 @@ export const MainDoctor: FC<MainDoctorProps> = ({ title, children }) => {
       <Heading as="h6" fontWeight="bold" fontSize='xl'>
         {title}
       </Heading>
-      <Text fontStyle="italic" fontSize="lg">
+      <Box fontStyle="italic" fontSize="lg">
         {children}
-      </Text>
+      </Box>
     </Box>
   ) : null;
 };

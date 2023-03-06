@@ -12,7 +12,19 @@ export const sluzbe: SluzbeObject = {
   opsta_medicina: {
     key: "opsta_medicina",
     name: "Служба за здравствену заштиту одраслог становништва са хитном медисинком помоћи, кућним лечењем и поливалентном патронажом",
-    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
+    images: [
+      "/images/Opsta/DSCF9251.webp",
+      "/images/Opsta/DSCF9255.webp",
+      "/images/Opsta/DSCF9261.webp",
+      "/images/Opsta/DSCF9262.webp",
+      "/images/Opsta/DSCF9263.webp",
+      "/images/Opsta/DSCF9269.webp",
+      "/images/Opsta/DSCF9270.webp",
+      "/images/Opsta/DSCF9271.webp",
+      "/images/Opsta/DSCF9273.webp",
+      "/images/Opsta/DSCF9310.webp",
+      "/images/Opsta/DSCF9349.webp",
+    ],
     nacelnik: {
       name: "Др Недељко Васић",
       title: "Специјалиста опште медицине",
@@ -104,12 +116,33 @@ export const sluzbe: SluzbeObject = {
       name: "Слађана Ивковић ",
       title: "Медицински техничар",
     },
-    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
+    images: [
+      "/images/Pedijatrija/DSCF9283.webp",
+      "/images/Pedijatrija/DSCF9285.webp",
+      "/images/Pedijatrija/DSCF9286.webp",
+      "/images/Ginekologija/DSCF9301.webp",
+      "/images/Ginekologija/DSCF9302.webp",
+    ],
     phones: [],
     izabraniLekari: [],
     odeljenja: [
       {
         name: "Oдељење за здравствену заштиту деце и школске деце",
+        images: [
+          "/images/Pedijatrija/DSCF9283.webp",
+          "/images/Pedijatrija/DSCF9285.webp",
+          "/images/Pedijatrija/DSCF9286.webp",
+          "/images/Pedijatrija/DSCF9287.webp",
+          "/images/Pedijatrija/DSCF9288.webp",
+          "/images/Pedijatrija/DSCF9289.webp",
+          "/images/Pedijatrija/DSCF9290.webp",
+          "/images/Pedijatrija/DSCF9291.webp",
+          "/images/Pedijatrija/DSCF9306.webp",
+          "/images/Pedijatrija/DSCF9307.webp",
+          "/images/Pedijatrija/DSCF9368.webp",
+          "/images/Pedijatrija/DSCF9369.webp",
+          "/images/Pedijatrija/DSCF9370.webp",
+        ],
         phones: [
           {
             number: "012/7160-701",
@@ -142,6 +175,14 @@ export const sluzbe: SluzbeObject = {
           name: "Др Јелена Штрбац",
           title: "Специјалиста гинекологије и акушерства",
         },
+        images: [
+          "/images/Ginekologija/DSCF9298.webp",
+          "/images/Ginekologija/DSCF9300.webp",
+          "/images/Ginekologija/DSCF9301.webp",
+          "/images/Ginekologija/DSCF9302.webp",
+          "/images/Ginekologija/DSCF9304.webp",
+          "/images/Ginekologija/DSCF9333.webp",
+        ],
         phones: [
           {
             type: "фиксни",
@@ -165,7 +206,14 @@ export const sluzbe: SluzbeObject = {
       },
       {
         name: "Oдељење денталне медицине",
-        rukovodilac: {name:"Др Миланка Петровић",title:""},
+        rukovodilac: { name: "Др Миланка Петровић", title: "" },
+        images: [
+          "/images/Stom/DSCF9353.webp",
+          "/images/Stom/DSCF9354.webp",
+          "/images/Stom/DSCF9355.webp",
+          "/images/Stom/DSCF9356.webp",
+          "/images/Stom/DSCF9357.webp",
+        ],
         phones: [
           {
             number: "012/7160-703",
@@ -195,15 +243,42 @@ export const sluzbe: SluzbeObject = {
   radiologija_laboratorija_i_specijalisticka_delatnost: {
     key: "radiologija_laboratorija_i_specijalisticka_delatnost",
     name: "Служба за радиолошку и лабораторијску дијагностику и специјалистичко консултативну делатност",
-    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
-    nacelnik: {name:"",title:""},
-    odgovorniTehnicar: {name:"Никола Вуликић",title:"Лабораторијски техничар"},
+    images: [
+      "/images/LAB/DSCF9279.webp",
+      "/images/LAB/DSCF9280.webp",
+      "/images/LAB/DSCF9281.webp",
+      "/images/Interna/DSCF9360.webp",
+      "/images/Fizikalna/DSCF9277.webp",
+      "/images/Fizikalna/DSCF9278.webp",
+    ],
+    nacelnik: {
+      name: "Др Маја Ивановић",
+      title: "Специјалиста клиничке биохемије",
+    },
+    odgovorniTehnicar: {
+      name: "Никола Вуликић",
+      title: "Лабораторијски техничар",
+    },
     phones: [],
     izabraniLekari: [],
     odeljenja: [
       {
         name: "Oдељење лабораторијске дијагностике",
-        rukovodilac: {name:"Др Маја Ивановић",title:"Специјалиста клиничке биохемије"},
+        rukovodilac: {
+          name: "Др Маја Ивановић",
+          title: "Специјалиста клиничке биохемије",
+        },
+        images: [
+          "/images/LAB/DSCF9253.webp",
+          "/images/LAB/DSCF9274.webp",
+          "/images/LAB/DSCF9279.webp",
+          "/images/LAB/DSCF9280.webp",
+          "/images/LAB/DSCF9281.webp",
+          "/images/LAB/DSCF9282.webp",
+          "/images/LAB/DSCF9365.webp",
+          "/images/LAB/DSCF9366.webp",
+          "/images/LAB/DSCF9367.webp",
+        ],
         phones: [
           {
             type: "фиксни",
@@ -221,6 +296,20 @@ export const sluzbe: SluzbeObject = {
       {
         name: "Oдељење специјалистичко-консултативне делатности",
         phones: [],
+        images: [
+          "/images/Interna/DSCF9358.webp",
+          "/images/Interna/DSCF9359.webp",
+          "/images/Interna/DSCF9360.webp",
+          "/images/Fizikalna/DSCF9277.webp",
+          "/images/Fizikalna/DSCF9278.webp",
+          "/images/Fizikalna/DSCF9362.webp",
+          "/images/Fizikalna/DSCF9363.webp",
+          "/images/Fizikalna/DSCF9364.webp",
+        ],
+        rukovodilac:{
+          name: "Др Мирослав Мирковић",
+            title: "Специјалиста интерне медицине",
+        },
         lekari: [
           {
             name: "Др Љиљана Стевановић",
@@ -251,7 +340,17 @@ export const sluzbe: SluzbeObject = {
       },
       {
         name: "Oдсек за радиолошку дијагностику",
-        rukovodilac: {name:"Др Оливера Радуловић",title:"Специјалиста радиологије"},
+        rukovodilac: {
+          name: "Др Оливера Радуловић",
+          title: "Специјалиста радиологије",
+        },
+        images: [
+          "/images/RTG/DSCF9312.webp",
+          "/images/RTG/DSCF9313.webp",
+          "/images/RTG/DSCF9314.webp",
+          "/images/RTG/DSCF9315.webp",
+          "/images/RTG/DSCF9316.webp",
+        ],
         phones: [
           {
             type: "фиксни",
@@ -274,8 +373,11 @@ export const sluzbe: SluzbeObject = {
   pravno_ekonomsko_tehnicka: {
     key: "pravno_ekonomsko_tehnicka",
     name: "Служба за правне, економско-финансијске, техничке и друге сличне послове",
-    nacelnik: {name:"Милан Баралић",title:""},
-    images: ["/images/sluzbe.jpg", "/images/sluzbe.jpg", "/images/sluzbe.jpg"],
+    nacelnik: {
+      name: "Милан Баралић",
+      title: "Дипломирани менаџер - Инжењер информатике",
+    },
+    images: ["/images/sluzbe.jpg"],
     phones: [
       {
         type: "фиксни",
