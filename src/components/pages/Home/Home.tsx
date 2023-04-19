@@ -14,8 +14,14 @@ export const Home = () => {
   return (
     <div>
       <Hero />
+
       <MainActionBar />
-      <Divider my={5} width="100%" borderBottomWidth={3} borderColor="primary.100"/>
+      <Divider
+        my={5}
+        width="100%"
+        borderBottomWidth={3}
+        borderColor="primary.100"
+      />
       <PageContainer>
         <SluzbeSection />
         <ProveraLekaraSection />

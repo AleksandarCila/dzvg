@@ -30,6 +30,8 @@ export const Section: FC<SectionProps> = ({
   href,
   direction = "row",
 }) => {
+  const borderRadius = direction === "row" ? "25px 25px 0 25px" : "0 25px 25px 25px";
+  const smallBorderRadius = "0 0 25px 25px ";
   return (
     <Flex
       width="100%"
@@ -45,6 +47,7 @@ export const Section: FC<SectionProps> = ({
           height="400px"
           objectFit="cover"
           objectPosition="center"
+          borderRadius={{ base: smallBorderRadius, md: borderRadius }}
         />
       </Box>
 

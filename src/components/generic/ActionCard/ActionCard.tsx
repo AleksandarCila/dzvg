@@ -35,8 +35,9 @@ export const ActionCard: FC<ActionCardProps> = ({
           height="100px"
           objectFit="cover"
           objectPosition="center"
+          
         />
-        <Heading as="h4" color="primary.200" _hover={{ color: "primary.100" }} fontSize="3xl">
+        <Heading as="h4" color="primary.200" _hover={{ color: "primary.100" }} fontSize="3xl" textShadow='1px 2px 2px rgba(227, 127, 125, 0.7)'>
           {title}
         </Heading>
         <Text>{text}</Text>

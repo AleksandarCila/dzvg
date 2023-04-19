@@ -19,10 +19,10 @@ const Odeljenje: FC<OdeljenjeProps> = ({ odeljenje }) => {
       p={5}
       my={1}
       borderWidth={1}
-      borderColor="primary.100"
+      // borderColor="primary.100"
       borderRadius={25}
       width="100%"
-      boxShadow="1px 2px 2px #00000060"
+      boxShadow="0px 0px 5px rgba(227, 127, 125, 0.7)"
     >
       <Flex
         justifyContent="space-between"
@@ -56,7 +56,7 @@ const Odeljenje: FC<OdeljenjeProps> = ({ odeljenje }) => {
 
         {odeljenje.images.length > 0 && (
           <Box
-            width={{ base: "300px", md: "500px" }}
+            width={{ base: "100%", md: "500px" }}
             height="350px"
           >
             <Carousel images={odeljenje.images} />
@@ -81,6 +81,7 @@ export const Odeljenja: FC<OdeljenjaProps> = ({ odeljenja }) => {
       flexDirection="column"
       alignItems="flex-start"
       justifyContent="flex-start"
+      width="100%"
     >
       {shouldRender && (
         <>
@@ -100,6 +101,7 @@ export const Odeljenja: FC<OdeljenjaProps> = ({ odeljenja }) => {
         justifyContent="flex-start"
         alignItems="center"
         py={10}
+        width="100%"
       >
         {shouldRender &&
           odeljenja.map((odeljenje) => (

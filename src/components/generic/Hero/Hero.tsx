@@ -1,4 +1,12 @@
-import { Flex, Image, Divider, Heading, Icon, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  Image,
+  Divider,
+  Heading,
+  Icon,
+  Text,
+  Box,
+} from "@chakra-ui/react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -9,13 +17,33 @@ export const Hero = () => {
       width="100%"
       direction={{ base: "column", lg: "row" }}
       alignItems="center"
-      bgColor="whitesmoke"
+      bgColor="white"
+      borderBottomRightRadius={{ base: 100, md: 250 }}
+      borderBottom="2px solid"
+      borderColor="secondary.100"
+      overflow="hidden"
     >
       <Flex
         height="500px"
         width={{ base: "100%", lg: "70%" }}
         justify={"center"}
+        style={{
+          overflow: "hidden",
+          position: "relative",
+        }}
       >
+        <Box
+          style={{
+            position: "absolute",
+            top: 0,
+            width: "100%",
+            height: "100%",
+            background:
+              "linear-gradient(180deg, rgba(255,246,238,0.13769257703081228) 0%, rgba(255,246,238,0.006852240896358524) 85%, rgba(255,246,238) 100%",
+          }}
+          // bgColor="secondary.100"
+          // opacity={0.15}
+        ></Box>
         <Image
           alt="Дом Здравља Велико Градиште"
           objectFit="cover"
@@ -27,16 +55,20 @@ export const Hero = () => {
       </Flex>
       <Flex p={5} justifyContent="center" flexDirection="column" color="black">
         <Heading as="h1">Дом Здравља Велико Градиште</Heading>
-        <Divider borderBottomWidth={2} borderColor="whiteAlpha.500" my={5} />
+        <Divider
+          borderBottomWidth={2}
+          borderColor={{ base: "transparent", md: "primary.100" }}
+          my={5}
+        />
         <Flex gap={5} justifyContent="flex-start" alignItems="center">
-          <Icon  fontSize="xl">
+          <Icon fontSize="xl">
             <BsFillTelephoneFill />
           </Icon>
           <Text fontSize="xl">012/662-591</Text>
           <Text fontSize="xl">012/7160-700</Text>
         </Flex>
         <Flex gap={5} justifyContent="flex-start" alignItems="center" py={5}>
-          <Icon  fontSize="xl">
+          <Icon fontSize="xl">
             <HiOutlineMail />
           </Icon>
           <Text fontSize="xl">info@dzvg.rs</Text>

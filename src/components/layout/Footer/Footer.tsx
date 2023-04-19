@@ -13,7 +13,7 @@ import { ReactNode } from "react";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2} color="primary.200">
+    <Text fontWeight={"500"} fontSize={"lg"} mb={2} color="black.500">
       {children}
     </Text>
   );
@@ -23,8 +23,9 @@ export const Footer = () => {
   return (
     <footer>
       <Box
-        bg={useColorModeValue("secondary.50", "gray.900")}
-        color={useColorModeValue("gray.700", "gray.200")}
+        bg={useColorModeValue("red.500", "gray.900")}
+        color={useColorModeValue("secondary.50", "gray.200")}
+        borderRadius={"25px 25px 0 0"}
       >
         <Container as={Stack} maxW={"6xl"} py={10}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
@@ -66,14 +67,14 @@ export const Footer = () => {
             _before={{
               content: '""',
               borderBottom: "1px solid",
-              borderColor: useColorModeValue("primary.100", "gray.700"),
+              borderColor: useColorModeValue("black.500", "gray.700"),
               flexGrow: 1,
               mr: 8,
             }}
             _after={{
               content: '""',
               borderBottom: "1px solid",
-              borderColor: useColorModeValue("primary.100", "gray.700"),
+              borderColor: useColorModeValue("black.500", "gray.700"),
               flexGrow: 1,
               ml: 8,
             }}

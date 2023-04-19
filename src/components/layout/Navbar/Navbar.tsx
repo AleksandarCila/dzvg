@@ -31,7 +31,7 @@ export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <nav>
+    <nav style={{boxShadow:"1px 2px 5px #00000040"}}>
       <Flex
         bg={"white"}
         color={"gray.600"}
@@ -148,7 +148,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("purple.50", "gray.900") }}
+      _hover={{ bg: useColorModeValue("secondary.50", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>

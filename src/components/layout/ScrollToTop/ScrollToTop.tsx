@@ -20,6 +20,7 @@ export const ScrollToTop: FC<ScrollToTopProps> = ({ show, onClick }) => {
       bottom="20px"
       right="20px"
       onClick={onClick}
+      size='lg'
     />
   ) : null;
 };

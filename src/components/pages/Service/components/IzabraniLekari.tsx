@@ -16,11 +16,11 @@ const IzabraniLekar: FC<IzabraniLekarProps> = ({ lekar }) => {
       width="220px"
       height="120px"
       borderWidth="1px"
-      borderColor="primary.200"
+      // borderColor="primary.200"
       borderRadius="25"
       justifyContent="center"
       alignItems="center"
-      boxShadow="1px 2px 2px #00000060"
+      boxShadow="0px 0px 5px rgba(227, 127, 125, 0.7)"
     >
       <Text fontSize="lg" textAlign='center'>{lekar.name}</Text>
       <Text fontSize="md" fontStyle="italic" textAlign='center'>

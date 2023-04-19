@@ -18,11 +18,11 @@ export const CardLink: FC<CardLinkProps> = ({ text, href }) => {
         alignItems="center"
         p={5}
         borderWidth={1}
-        borderColor="primary.200"
+        // borderColor="primary.200"
         borderRadius={25}
         my={4}
-        boxShadow="1px 2px 2px #00000060"
-        _hover={{boxShadow:"2px 4px 4px #000000a0"}}
+        boxShadow="0px 0px 5px rgba(227, 127, 125, 0.7)"
+        _hover={{boxShadow:"0px 0px 10px rgba(227, 127, 125, 0.8)"}}
       >
         <Text fontSize="xl" flex={1}>
           {text}

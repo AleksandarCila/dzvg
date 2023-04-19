@@ -9,12 +9,22 @@ import { Footer, Navbar, ScrollToTop } from "../components";
 
 import { Montserrat, Manrope } from "@next/font/google";
 
-import '../styles/Carousel.css'
+import "../styles/Carousel.css";
 
 const montserrat = Montserrat({ subsets: ["cyrillic"] });
 const manrope = Manrope({ subsets: ["cyrillic"] });
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  colors,
+  styles: {
+    global: () => ({
+      // Optionally set global CSS styles
+      body: {
+        color: "#1E1E24"
+      },
+    }),
+  },
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   const pageTopRef = useRef<HTMLDivElement>(null);

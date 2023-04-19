@@ -1,7 +1,13 @@
-import { FC, useState } from "react";
-import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-import Slider from "react-slick";
+import { FC } from "react";
+import { Box } from "@chakra-ui/react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 type CarouselProps = {
   images: string[];
@@ -21,66 +27,40 @@ const settings = {
 };
 
 export const Carousel: FC<CarouselProps> = ({ images }) => {
-  const [slider, setSlider] = useState<Slider | null>(null);
-
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "10px" });
-  console.log(images);
   return (
-    <Box
-      position={"relative"}
-      height={"100%"}
-      width={"full"}
-      maxW="100%"
-      overflow={"hidden"}
+    <Swiper
+      slidesPerView={1}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      style={{
+        position: "relative",
+        height: "100%",
+        width: "100%",
+        //@ts-ignore
+        "--swiper-theme-color":"#DA5552",
+      }}
     >
-      {/* Left Icon */}
-      <IconButton
-        aria-label="left-arrow"
-        colorScheme="primary"
-        borderRadius="full"
-        position="absolute"
-        left={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}
-      >
-        <BiLeftArrowAlt />
-      </IconButton>
-      {/* Right Icon */}
-      <IconButton
-        aria-label="right-arrow"
-        colorScheme="primary"
-        borderRadius="full"
-        position="absolute"
-        right={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}
-      >
-        <BiRightArrowAlt />
-      </IconButton>
-      {/* Slider */}
-      <Slider
-        {...settings}
-        ref={(slider) => setSlider(slider)}
-        adaptiveHeight={true}
-        
-      >
-        {images.map((url, index) => (
+      {images.map((url, index) => (
+        <SwiperSlide key={url}>
           <Box
             key={index}
-            height={{base:'lg', md:'xl'}}
             backgroundPosition="center"
+            height="100%"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
             backgroundImage={`url(${url})`}
             maxW="100%"
+            borderRadius={25}
           />
-        ))}
-      </Slider>
-    </Box>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
