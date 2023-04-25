@@ -22,6 +22,10 @@ export const Hero = () => {
       borderBottom="2px solid"
       borderColor="secondary.100"
       overflow="hidden"
+      sx={{
+        boxShadow:"inset -10px -10px 27px -20px rgba(0,0,0,1);"
+
+      }}
     >
       <Flex
         height="500px"
@@ -38,8 +42,10 @@ export const Hero = () => {
             top: 0,
             width: "100%",
             height: "100%",
-            background:
-              "linear-gradient(180deg, rgba(255,246,238,0.13769257703081228) 0%, rgba(255,246,238,0.006852240896358524) 85%, rgba(255,246,238) 100%",
+            boxShadow:"inset 0px -36px 70px -27px rgba(255,246,238)",
+            zIndex:10
+            // background:
+            //   "linear-gradient(180deg, rgba(255,246,238,0.13769257703081228) 0%, rgba(255,246,238,0.006852240896358524) 85%, rgba(255,246,238) 100%",
           }}
           // bgColor="secondary.100"
           // opacity={0.15}
@@ -51,6 +57,7 @@ export const Hero = () => {
           width="100%"
           height="100%"
           objectPosition={["top center"]}
+          zIndex={0}
         />
       </Flex>
       <Flex p={5} justifyContent="center" flexDirection="column" color="black">
