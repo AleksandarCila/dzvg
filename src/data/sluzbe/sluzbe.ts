@@ -13,17 +13,10 @@ export const sluzbe: SluzbeObject = {
     key: "opsta_medicina",
     name: "Служба за здравствену заштиту одраслог становништва са хитном медисинком помоћи, кућним лечењем и поливалентном патронажом",
     images: [
-      "/images/Opsta/DSCF9251.webp",
-      "/images/Opsta/DSCF9255.webp",
-      "/images/Opsta/DSCF9261.webp",
-      "/images/Opsta/DSCF9262.webp",
-      "/images/Opsta/DSCF9263.webp",
-      "/images/Opsta/DSCF9269.webp",
-      "/images/Opsta/DSCF9270.webp",
       "/images/Opsta/DSCF9271.webp",
-      "/images/Opsta/DSCF9273.webp",
-      "/images/Opsta/DSCF9310.webp",
-      "/images/Opsta/DSCF9349.webp",
+      "/images/Opsta/DSC_1156.webp",
+      "/images/Opsta/DSC_1157.webp",
+      "/images/Opsta/DSC_1161.webp",
     ],
     nacelnik: {
       name: "Др Недељко Васић",
@@ -117,11 +110,11 @@ export const sluzbe: SluzbeObject = {
       title: "Медицински техничар",
     },
     images: [
-      "/images/Pedijatrija/DSCF9283.webp",
-      "/images/Pedijatrija/DSCF9285.webp",
-      "/images/Pedijatrija/DSCF9286.webp",
-      "/images/Ginekologija/DSCF9301.webp",
-      "/images/Ginekologija/DSCF9302.webp",
+      "/images/Ginekologija/DSC_1139.webp",
+      "/images/Pedijatrija/DSCF9291.webp",
+      "/images/Ginekologija/DSCF9333.webp",
+      "/images/Pedijatrija/DSC_1188.webp",
+      "/images/Pedijatrija/DSC_1194.webp",
     ],
     phones: [],
     izabraniLekari: [],
@@ -129,19 +122,13 @@ export const sluzbe: SluzbeObject = {
       {
         name: "Oдељење за здравствену заштиту деце и школске деце",
         images: [
-          "/images/Pedijatrija/DSCF9283.webp",
-          "/images/Pedijatrija/DSCF9285.webp",
-          "/images/Pedijatrija/DSCF9286.webp",
           "/images/Pedijatrija/DSCF9287.webp",
-          "/images/Pedijatrija/DSCF9288.webp",
-          "/images/Pedijatrija/DSCF9289.webp",
-          "/images/Pedijatrija/DSCF9290.webp",
           "/images/Pedijatrija/DSCF9291.webp",
-          "/images/Pedijatrija/DSCF9306.webp",
-          "/images/Pedijatrija/DSCF9307.webp",
-          "/images/Pedijatrija/DSCF9368.webp",
-          "/images/Pedijatrija/DSCF9369.webp",
-          "/images/Pedijatrija/DSCF9370.webp",
+          "/images/Pedijatrija/DSC_1131.webp",
+          "/images/Pedijatrija/DSC_1134.webp",
+          "/images/Pedijatrija/DSC_1188.webp",
+          "/images/Pedijatrija/DSC_1190.webp",
+          "/images/Pedijatrija/DSC_1194.webp",
         ],
         phones: [
           {
@@ -176,12 +163,10 @@ export const sluzbe: SluzbeObject = {
           title: "Специјалиста гинекологије и акушерства",
         },
         images: [
-          "/images/Ginekologija/DSCF9298.webp",
-          "/images/Ginekologija/DSCF9300.webp",
-          "/images/Ginekologija/DSCF9301.webp",
-          "/images/Ginekologija/DSCF9302.webp",
-          "/images/Ginekologija/DSCF9304.webp",
           "/images/Ginekologija/DSCF9333.webp",
+          "/images/Ginekologija/DSC_1136.webp",
+          "/images/Ginekologija/DSC_1139.webp",
+          "/images/Ginekologija/DSC_1141.webp",
         ],
         phones: [
           {
@@ -209,10 +194,10 @@ export const sluzbe: SluzbeObject = {
         rukovodilac: { name: "Др Миланка Петровић", title: "" },
         images: [
           "/images/Stom/DSCF9353.webp",
-          "/images/Stom/DSCF9354.webp",
-          "/images/Stom/DSCF9355.webp",
-          "/images/Stom/DSCF9356.webp",
-          "/images/Stom/DSCF9357.webp",
+          "/images/Stom/DSC_1166.webp",
+          "/images/Stom/DSC_1167.webp",
+          "/images/Stom/DSC_1169.webp",
+          "/images/Stom/DSC_1172.webp",
         ],
         phones: [
           {
@@ -244,9 +229,9 @@ export const sluzbe: SluzbeObject = {
     key: "radiologija_laboratorija_i_specijalisticka_delatnost",
     name: "Служба за радиолошку и лабораторијску дијагностику и специјалистичко консултативну делатност",
     images: [
+      "/images/LAB/DSCF9253.webp",
+      "/images/LAB/DSCF9274.webp",
       "/images/LAB/DSCF9279.webp",
-      "/images/LAB/DSCF9280.webp",
-      "/images/LAB/DSCF9281.webp",
       "/images/Interna/DSCF9360.webp",
       "/images/Fizikalna/DSCF9277.webp",
       "/images/Fizikalna/DSCF9278.webp",
@@ -272,12 +257,10 @@ export const sluzbe: SluzbeObject = {
           "/images/LAB/DSCF9253.webp",
           "/images/LAB/DSCF9274.webp",
           "/images/LAB/DSCF9279.webp",
-          "/images/LAB/DSCF9280.webp",
-          "/images/LAB/DSCF9281.webp",
-          "/images/LAB/DSCF9282.webp",
-          "/images/LAB/DSCF9365.webp",
           "/images/LAB/DSCF9366.webp",
-          "/images/LAB/DSCF9367.webp",
+          "/images/LAB/DSC_1173.webp",
+          "/images/LAB/DSC_1174.webp",
+          "/images/LAB/DSC_1175.webp",
         ],
         phones: [
           {
@@ -304,11 +287,10 @@ export const sluzbe: SluzbeObject = {
           "/images/Fizikalna/DSCF9278.webp",
           "/images/Fizikalna/DSCF9362.webp",
           "/images/Fizikalna/DSCF9363.webp",
-          "/images/Fizikalna/DSCF9364.webp",
         ],
-        rukovodilac:{
+        rukovodilac: {
           name: "Др Мирослав Мирковић",
-            title: "Специјалиста интерне медицине",
+          title: "Специјалиста интерне медицине",
         },
         lekari: [
           {
@@ -347,7 +329,6 @@ export const sluzbe: SluzbeObject = {
         images: [
           "/images/RTG/DSCF9312.webp",
           "/images/RTG/DSCF9313.webp",
-          "/images/RTG/DSCF9314.webp",
           "/images/RTG/DSCF9315.webp",
           "/images/RTG/DSCF9316.webp",
         ],
@@ -377,7 +358,11 @@ export const sluzbe: SluzbeObject = {
       name: "Милан Баралић",
       title: "Дипломирани менаџер - Инжењер информатике",
     },
-    images: ["/images/sluzbe.jpg"],
+    images: [
+      '/images/Uprava/DSC_1142.webp',
+      '/images/Uprava/DSC_1145.webp',
+      '/images/Uprava/DSC_1146.webp'
+    ],
     phones: [
       {
         type: "фиксни",
