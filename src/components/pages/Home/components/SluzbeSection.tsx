@@ -7,7 +7,7 @@ export const SluzbeSection = () => {
     <Section
       title="Службе"
       text="Дом Здравља Велико Градиште се састоји од 4 службе. Више информација о свакој од служби, њиховом радном времену и дежурствима сазнајте кликом на дугме."
-      imageSrc="/images/sluzbe.jpg"
+      imageSrc="/images/sluzbe.webp"
       cta="Сазнајте више"
       href="/sluzbe"
     />

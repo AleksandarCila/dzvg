@@ -31,7 +31,7 @@ export const IzabraniLekar = () => {
             <PrimaryButton>Провера изабраног лекара</PrimaryButton>
           </Link>
           <Image
-            src="/images/provera_lekara.jpg"
+            src="/images/provera_lekara.webp"
             alt="Provera izabranog lekara"
           />
         </Flex>
