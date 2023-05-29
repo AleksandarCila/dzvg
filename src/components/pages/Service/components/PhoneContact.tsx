@@ -3,6 +3,7 @@ import { FC } from "react";
 import { Flex, Icon, Text } from "@chakra-ui/react";
 
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { PhoneNumberLink } from "@/components/generic";
 
 type PhoneContactProps = {
   type: string;
@@ -22,7 +23,7 @@ export const PhoneContact: FC<PhoneContactProps> = ({ type, number }) => {
       <Icon color="primary.200" fontSize='xl'>
         <BsFillTelephoneFill />
       </Icon>
-      <Text>{number}</Text>
+      <Text><PhoneNumberLink number={number}/></Text>
       -
       <Text fontStyle="italic">{type}</Text>
     </Flex>

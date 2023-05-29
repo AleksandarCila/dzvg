@@ -16,11 +16,11 @@ const Odeljenje: FC<OdeljenjeProps> = ({ odeljenje }) => {
   return (
     <Flex
       flexDirection="column"
-      p={5}
+      p={{base:3,md:5}}
       my={1}
       borderWidth={1}
       // borderColor="primary.100"
-      borderRadius={25}
+      borderRadius={{base:10,md:25}}
       width="100%"
       boxShadow="0px 0px 5px rgba(227, 127, 125, 0.7)"
     >
@@ -57,7 +57,7 @@ const Odeljenje: FC<OdeljenjeProps> = ({ odeljenje }) => {
         {odeljenje.images.length > 0 && (
           <Box
             width={{ base: "100%", md: "500px" }}
-            height="350px"
+            height={{base:"250px", md:"350px"}}
           >
             <Carousel images={odeljenje.images} />
           </Box>

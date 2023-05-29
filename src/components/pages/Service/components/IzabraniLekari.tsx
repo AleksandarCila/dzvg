@@ -11,19 +11,19 @@ const IzabraniLekar: FC<IzabraniLekarProps> = ({ lekar }) => {
   return (
     <Flex
       flexDirection="column"
-      p={1}
+      p={{base:0.5,md:1}}
       m={1}
-      width="220px"
-      height="120px"
+      width={{base:"150px",md:"220px"}}
+      height={{base:"80px",md:"120px"}}
       borderWidth="1px"
       // borderColor="primary.200"
-      borderRadius="25"
+      borderRadius={{base:10,md:"25"}}
       justifyContent="center"
       alignItems="center"
       boxShadow="0px 0px 5px rgba(227, 127, 125, 0.7)"
     >
-      <Text fontSize="lg" textAlign='center'>{lekar.name}</Text>
-      <Text fontSize="md" fontStyle="italic" textAlign='center'>
+      <Text fontSize={{base:"lg",md:"sm"}} textAlign='center'>{lekar.name}</Text>
+      <Text fontSize={{base:"xs",md:"md"}} fontStyle="italic" textAlign='center'>
         {lekar.title}
       </Text>
     </Flex>

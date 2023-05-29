@@ -10,6 +10,7 @@ import {
   Tbody,
   Td,
 } from "@chakra-ui/react";
+import { PhoneNumberLink } from "@/components/generic";
 
 type ContactsGroupProps = {
   contactsGroup: {
@@ -34,7 +35,7 @@ export const ContactsGroup: FC<ContactsGroupProps> = ({ contactsGroup }) => {
           {contactsGroup.children.map((contact) => (
             <Tr key={`${contact.title}${contact.number}`} borderColor='primary.100'>
               <Td whiteSpace='pre-wrap' borderColor='transparent'>{contact.title}</Td>
-              <Td fontWeight="bold" borderColor='transparent'>{contact.number}</Td>
+              <Td fontWeight="bold" borderColor='transparent'><PhoneNumberLink number={contact.number}/></Td>
             </Tr>
           ))}
         </Tbody>

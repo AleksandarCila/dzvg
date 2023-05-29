@@ -29,7 +29,7 @@ export const Service: FC<ServiceProps> = ({ service }) => {
           <Carousel images={service.images} />
         </Box>
 
-        <Box width={{ base: "100%", md: "50%" }} p={5}>
+        <Box width={{ base: "100%", md: "50%" }} p={{base:2,md:5}}>
           <MainDoctor title="Начелник службе: ">
             {service.nacelnik.name}
             {service.nacelnik.title !== "" && <p>({service.nacelnik.title})</p>}
@@ -43,10 +43,10 @@ export const Service: FC<ServiceProps> = ({ service }) => {
           <Kontakt phones={service.phones} />
         </Box>
       </Flex>
-      <Flex justifyContent="center" alignSelf="center" p={5}>
+      <Flex justifyContent="center" alignSelf="center" p={{base:2,md:5}}>
         <IzabraniLekari lekari={service.izabraniLekari} />
       </Flex>
-      <Flex justifyContent="center" alignSelf="center" p={5}>
+      <Flex justifyContent="center" alignSelf="center" p={{base:2,md:5}}>
         <Odeljenja odeljenja={service.odeljenja} />
       </Flex>
     </PageContainer>

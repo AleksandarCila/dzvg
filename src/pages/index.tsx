@@ -1,8 +1,22 @@
+//@ts-nocheck
+
 import Head from "next/head";
 
 import { Home as HomePage } from "@/components";
+import { useEffect } from "react";
+
+import cosmic from "@/api/client";
 
 export default function Home() {
+  useEffect(() => {
+    (async () => {
+      await cosmic.objects
+        .find({
+          type: "posts",
+        })
+        .limit(1);
+    })();
+  }, []);
   return (
     <>
       <Head>

@@ -1,3 +1,4 @@
+import { PhoneNumberLink } from "@/components/generic";
 import {
   Box,
   Container,
@@ -32,7 +33,7 @@ export const Footer = () => {
             <Stack align={"flex-start"}>
               <ListHeader>Дом Здравља Велико Градиште</ListHeader>
               <Text>Војводе Путника 28, 12220 Велико Градиште</Text>
-              <Text>012/7160-700</Text>
+              <Text><PhoneNumberLink number="012/7160-700"/></Text>
               <Text>Ж.Р. 840-473661-98</Text>
               <Text>ПИБ: 101364553</Text>
             </Stack>
@@ -50,9 +51,9 @@ export const Footer = () => {
               <Link href={"/radno_vreme"}>Радно време</Link>
               <Link href={"/telefonski_imenik"}>Телефонски именик</Link>
               <Link href={"/sluzbe"}>Службе</Link>
-              <Link href={"#"}>Информације</Link>
+              <Link href={"/informacije"}>Информације</Link>
               <Link href={"/o_nama"}>О нама</Link>
-              <Link href={"#"}>Документи</Link>
+              <Link href={"/dokumenti"}>Документи</Link>
             </Stack>
 
             <Stack align={"flex-start"}>

@@ -57,7 +57,7 @@ export const Carousel: FC<CarouselProps> = ({ images }) => {
             backgroundSize="cover"
             backgroundImage={`url(${url})`}
             maxW="100%"
-            borderRadius={25}
+            borderRadius={{base:0,md:25}}
           />
         </SwiperSlide>
       ))}

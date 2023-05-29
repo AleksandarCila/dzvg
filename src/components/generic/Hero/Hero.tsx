@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
+import { PhoneNumberLink } from "../PhoneNumberLink";
 
 export const Hero = () => {
   return (
@@ -66,14 +67,14 @@ export const Hero = () => {
           <Icon fontSize="xl">
             <BsFillTelephoneFill />
           </Icon>
-          <Text fontSize="xl">012/662-591</Text>
-          <Text fontSize="xl">012/7160-700</Text>
+          <Text fontSize="xl"><PhoneNumberLink number="012/662-591"/></Text>
+          <Text fontSize="xl"><PhoneNumberLink number="012/7160-700"/></Text>
         </Flex>
         <Flex gap={5} justifyContent="flex-start" alignItems="center" py={5}>
           <Icon fontSize="xl">
             <HiOutlineMail />
           </Icon>
-          <Text fontSize="xl">info@dzvg.rs</Text>
+          <Text fontSize="xl"><a href="mailto:info@dzvg.rs">info@dzvg.rs</a></Text>
         </Flex>
       </Flex>
     </Flex>
