@@ -12,6 +12,7 @@ const SluzbeIndex = () => {
           name="description"
           content="Sve sluzbe Doma Zdravlja Veliko Gradiste"
         />
+        <meta name="keywords" content="službe, dom zdravlja, veliko gradište"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

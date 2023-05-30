@@ -11,6 +11,7 @@ const RadnoVreme = () => {
           name="description"
           content="Radno Vreme Doma Zdravlja Veliko Gradište"
         />
+        <meta name="keywords" content="radno vreme, dom zdravlja, veliko gradište"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

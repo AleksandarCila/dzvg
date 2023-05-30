@@ -11,6 +11,7 @@ export default function IzabraniLekar() {
           name="description"
           content="Uputstvo za proveru izabranog lekara"
         />
+        <meta name="keywords" content="provera izabranog lekara, dom zdravlja, veliko gradište"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
