@@ -1,8 +1,7 @@
 import * as prismic from '@prismicio/client'
 
-const repositoryName = 'test-cila'
+const repositoryName = 'dzvg'
 const routes = [
-  // Update to match your website's URL structure
   { type: 'obavestenje', path: '/:uid' },
 ]
 

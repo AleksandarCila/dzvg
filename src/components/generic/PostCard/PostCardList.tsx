@@ -4,7 +4,8 @@ import React from "react";
 import { PostCard } from "./PostCard";
 import { PostCardSkeleton } from "./PostCardSkeleton";
 
-export const PostCardList = ({ posts, loading }) => {
+export const PostCardList = ({ posts, loading, limit }) => {
+  const postsToRender = limit ? posts?.slice(0, limit) : posts;
   return (
     <HStack flexWrap="wrap" gap={5} p={5} spacing={0} sx={{ width: "100%" }}>
       {loading ? (
@@ -16,7 +17,7 @@ export const PostCardList = ({ posts, loading }) => {
       ) : (
         <>
           {posts && posts.length > 0 ? (
-            posts?.map((post) => {
+            postsToRender?.map((post) => {
               const { title, image, body } = post.data;
               return (
                 <PostCard
