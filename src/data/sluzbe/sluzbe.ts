@@ -68,7 +68,7 @@ export const sluzbe: SluzbeObject = {
         name: "Др Данијела Јенић",
       },
       {
-        name: "Др Лазар Милосављевић",
+        name: "Др Бобан Петровић",
       },
 
       {

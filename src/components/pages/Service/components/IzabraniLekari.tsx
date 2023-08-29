@@ -45,7 +45,7 @@ export const IzabraniLekari: FC<IzabraniLekariProps> = ({ lekari }) => {
       {shouldRender && (
         <>
           <Text fontSize="xl" fontWeight="bold">
-            Изабрани лекари
+            Лекари
           </Text>
           <Divider
             my={4}
