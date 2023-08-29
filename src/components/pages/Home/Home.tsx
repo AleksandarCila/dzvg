@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Hero } from "@/components/generic";
+import { Hero, PostCardList, Title } from "@/components/generic";
 import { PageContainer } from "@/components/layout";
 
 import {
@@ -8,9 +8,12 @@ import {
   ProveraLekaraSection,
   SluzbeSection,
 } from "./components";
-import { Container, Divider, Flex } from "@chakra-ui/react";
+import {  Divider, } from "@chakra-ui/react";
+import { useGetAllPosts } from "@/api/hooks";
 
 export const Home = () => {
+  const { posts, loading } = useGetAllPosts();
+
   return (
     <div>
       <Hero />
@@ -25,6 +28,8 @@ export const Home = () => {
       <PageContainer>
         <SluzbeSection />
         <ProveraLekaraSection />
+        <Title title="Информације" />
+        <PostCardList loading={loading} posts={posts} />
       </PageContainer>
     </div>
   );

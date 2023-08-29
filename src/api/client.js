@@ -1,9 +1,9 @@
-import { createBucketClient } from "@cosmicjs/sdk";
+import * as prismic from '@prismicio/client'
 
-const cosmic = createBucketClient({
-  bucketSlug: "dzvg-production",
-  readKey: "M2r6DAIjGrW5tcwI1cXSWTP8bQzS5jgdUdeIxMAJ6xYHlXtUDJ",
-  writeKey: "exlHYUosCL3hjcETBpdyGxex2cVdM01uPUq7CsPuaZwbGNeb3y",
-});
+const repositoryName = 'test-cila'
+const routes = [
+  // Update to match your website's URL structure
+  { type: 'obavestenje', path: '/:uid' },
+]
 
-export default cosmic;
+export const client = prismic.createClient(repositoryName, { routes })

@@ -2,7 +2,7 @@ import React from "react";
 
 import { PageContainer } from "@/components/layout";
 import { Title } from "@/components/generic";
-import { Text, Heading, Box, Stack } from "@chakra-ui/react";
+import { Text, Heading, Box } from "@chakra-ui/react";
 
 export const About = () => {
   return (
