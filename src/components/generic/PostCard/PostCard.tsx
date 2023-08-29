@@ -13,8 +13,8 @@ export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
   return (
     <Card
       sx={{
-        width: { base: "100%", md: 250 },
-        maxWidth: { base: "100%", md: 250 },
+        width: { base: "100%", md: 320 },
+        maxWidth: { base: "100%", md: 320 },
         height: 400,
         maxHeight: 400,
       }}
@@ -32,7 +32,7 @@ export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
             boxShadow: "0 2px 2px rgba(0,0,0,0.12)",
           }}
         />
-        <Stack sx={{ gap: 1, py: 4, px: 2, flex: 1 }}>
+        <Stack sx={{ gap: 1, py: 4, px: 4, flex: 1 }}>
           <Text as="h2" fontSize={24}>
             {title}
           </Text>

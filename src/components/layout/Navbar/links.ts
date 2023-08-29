@@ -64,10 +64,10 @@ export const NAV_ITEMS: Array<NavItem> = [
         label: "Документи",
         href: "/dokumenti",
       },
-      // {
-      //   label: "Информације",
-      //   href: "/informacije",
-      // },
+      {
+        label: "Информације",
+        href: "/informacije",
+      },
     ],
   },
 ];

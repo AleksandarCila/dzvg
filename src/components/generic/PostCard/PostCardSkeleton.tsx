@@ -5,8 +5,8 @@ export const PostCardSkeleton = () => {
   return (
     <Skeleton
       sx={{
-        width: { base: "100%", md: 250 },
-        maxWidth: { base: "100%", md: 250 },
+        width: { base: "100%", md: 320 },
+        maxWidth: { base: "100%", md: 320 },
         height: 400,
         maxHeight: 400,
       }}
