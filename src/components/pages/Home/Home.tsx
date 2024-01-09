@@ -11,9 +11,11 @@ import {
 import { Divider, Stack, Text } from "@chakra-ui/react";
 import { useGetAllPosts } from "@/api/hooks";
 import Link from "next/link";
+import { useScreenSize } from "@/utils/hooks";
 
 export const Home = () => {
   const { posts, loading } = useGetAllPosts();
+  const { isDesktop } = useScreenSize();
 
   return (
     <div>
@@ -30,9 +32,20 @@ export const Home = () => {
         <SluzbeSection />
         <ProveraLekaraSection />
         <Title title="Информације" />
-        <PostCardList loading={loading} posts={posts} limit={2} />
+        <PostCardList
+          loading={loading}
+          posts={posts}
+          limit={isDesktop ? 4 : 2}
+        />
         {posts && posts?.length > 0 && (
-          <Stack sx={{ justifyContent: "center", alignItems: "center", gap:2, mt:10 }}>
+          <Stack
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 2,
+              mt: 10,
+            }}
+          >
             <Text fontSize={20}>За све информације и најновија обавештења</Text>
             <Link href="/informacije">
               <PrimaryButton>Више информација</PrimaryButton>

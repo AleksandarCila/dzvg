@@ -45,4 +45,9 @@ export const dokumenti: DocType[] = [
     url: "/docs/Strateski-Plan-2019-2024-potpun.doc",
     icon: <HiOutlineDocumentText fontSize={18} />,
   },
+  {
+    name: "Родна радноправност 2023",
+    url: "/docs/rodna-ravnopranost-2023.pdf",
+    icon: <HiOutlineDocumentText fontSize={18} />,
+  },
 ];

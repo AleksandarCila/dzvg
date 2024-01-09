@@ -1,4 +1,13 @@
-import { background, Button, Card, Image, Stack, Text } from "@chakra-ui/react";
+import { useScreenSize } from "@/utils/hooks";
+import {
+  background,
+  Button,
+  Card,
+  Image,
+  Stack,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import Link from "next/link";
 import React, { FC } from "react";
 
@@ -10,6 +19,9 @@ interface PostCardProps {
 }
 
 export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
+  const slicedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
+  const { isDesktop } = useScreenSize();
+
   return (
     <Card
       sx={{
@@ -34,12 +46,12 @@ export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
         />
         <Stack sx={{ gap: 1, py: 4, px: 4, flex: 1 }}>
           <Text as="h2" fontSize={24}>
-            {title}
+            {isDesktop ? slicedTitle : title}
           </Text>
-          <Text>{`${body.slice(0, 100)}...`}</Text>
+          <Text>{`${body.slice(0, 80)}...`}</Text>
         </Stack>
         <Link href={`/informacije/${id}`}>
-          <Button sx={{width:"100%"}}>Прочитај више</Button>
+          <Button sx={{ width: "100%" }}>Прочитај више</Button>
         </Link>
       </Stack>
     </Card>
