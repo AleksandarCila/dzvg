@@ -20,15 +20,16 @@ interface PostCardProps {
 
 export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
   const slicedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
-  const { isDesktop } = useScreenSize();
+  const { isDesktop, isTablet } = useScreenSize();
 
   return (
     <Card
       sx={{
-        width: { base: "100%", md: 320 },
-        maxWidth: { base: "100%", md: 320 },
-        height: 400,
-        maxHeight: 400,
+        // width: { base: "100%"},
+        // maxWidth: { base: "100%" },
+        // height: (isDesktop || isTablet) && 400,
+        // maxHeight: (isDesktop || isTablet) && 400,
+        height: "100%",
       }}
     >
       <Stack
@@ -46,7 +47,7 @@ export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
         />
         <Stack sx={{ gap: 1, py: 4, px: 4, flex: 1 }}>
           <Text as="h2" fontSize={24}>
-            {isDesktop ? slicedTitle : title}
+            {isDesktop || isTablet ? slicedTitle : title}
           </Text>
           <Text>{`${body.slice(0, 80)}...`}</Text>
         </Stack>

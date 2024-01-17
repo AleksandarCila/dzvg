@@ -10,8 +10,9 @@ export const useGetAllPosts = () => {
   const fetchPosts = async () => {
     try {
       setLoading(true);
-      const res = await client.getAllByType("obavestenje");
-      console.log(res);
+      const res = await client.getAllByType("obavestenje", {
+        orderings: "document.first_publication_date desc",
+      });
       setPosts(res);
     } catch (err) {
       console.log(err);

@@ -35,7 +35,7 @@ export const Home = () => {
         <PostCardList
           loading={loading}
           posts={posts}
-          limit={isDesktop ? 4 : 2}
+          limit={isDesktop ? 6 : 3}
         />
         {posts && posts?.length > 0 && (
           <Stack

@@ -1,22 +1,39 @@
 //@ts-nocheck
 import { useScreenSize } from "@/utils/hooks";
-import { HStack, Text } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Text } from "@chakra-ui/react";
 import React from "react";
 import { PostCard } from "./PostCard";
 import { PostCardSkeleton } from "./PostCardSkeleton";
 
 export const PostCardList = ({ posts, loading, limit }) => {
-  const postsToRender = limit ? posts?.slice(0, limit) : posts;
-  const { isDesktop } = useScreenSize();
+  const postsSorted = posts?.sort((a, b) => {
+    const isAPinned = a?.tags?.includes("Bitno");
+    const isBPinned = b?.tags?.includes("Bitno");
+
+    if (isAPinned && !isBPinned) return -1;
+    if (!isAPinned && isBPinned) return 1;
+    return 0;
+  });
+
+  const postsToRender = limit ? postsSorted?.slice(0, limit) : posts;
+  const { isDesktop, isTablet } = useScreenSize();
+
+  const getGridColumns = () => {
+    if (isDesktop) return "repeat(3, 1fr)";
+    if (isTablet) return "repeat(2, 1fr)";
+    return "repeat(1, 1fr)";
+  };
+
   return (
-    <HStack
+    <Grid
       flexWrap="wrap"
+      templateColumns={getGridColumns()}
       gap={5}
       p={5}
       spacing={0}
       sx={{
         width: "100%",
-        justifyContent: isDesktop ? "space-between" : "center",
+        // justifyContent: isDesktop ? "space-between" : "center",
       }}
     >
       {loading ? (
@@ -31,13 +48,14 @@ export const PostCardList = ({ posts, loading, limit }) => {
             postsToRender?.map((post) => {
               const { title, image, body } = post.data;
               return (
-                <PostCard
-                  key={post.id}
-                  id={post.uid}
-                  title={title?.[0].text}
-                  image={image.url}
-                  body={body?.[0].text}
-                />
+                <GridItem key={post.id}>
+                  <PostCard
+                    id={post.uid}
+                    title={title?.[0].text}
+                    image={image.url}
+                    body={body?.[0].text}
+                  />
+                </GridItem>
               );
             })
           ) : (
@@ -45,6 +63,6 @@ export const PostCardList = ({ posts, loading, limit }) => {
           )}
         </>
       )}
-    </HStack>
+    </Grid>
   );
 };
