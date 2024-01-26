@@ -1,16 +1,14 @@
 //@ts-nocheck
 import { useGetPostById } from "@/api/hooks";
-import { PageContainer, PostCardList, Title } from "@/components";
-import { Image, Progress, Skeleton, Stack, Text } from "@chakra-ui/react";
+import { PageContainer, Title } from "@/components";
+import { Image, Progress, Stack, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
 const Informacija = () => {
   const router = useRouter();
-  // const { id } = router.query;
-  const { id } = router.query;
-
-  const { post, loading } = useGetPostById(id);
+  const { slug } = router.query;
+  const { post, loading } = useGetPostById(slug);
 
   return (
     <>
@@ -31,7 +29,7 @@ const Informacija = () => {
         {!post || loading ? (
           <Progress size="xs" isIndeterminate colorScheme="orange" />
         ) : (
-          <Stack sx={{ gap: 2, p: 5, pb: 10,textAlign:'justify' }}>
+          <Stack sx={{ gap: 2, p: 5, pb: 10, textAlign: "justify" }}>
             <Title title={post.data.title?.[0].text} />
             <Stack sx={{ justifyContent: "center" }}>
               <Image
@@ -41,9 +39,7 @@ const Informacija = () => {
               />
             </Stack>
             {post.data.body?.map((paragraph, ind) => (
-              <Text key={ind} >
-                {paragraph.text}
-              </Text>
+              <Text key={ind}>{paragraph.text}</Text>
             ))}
           </Stack>
         )}

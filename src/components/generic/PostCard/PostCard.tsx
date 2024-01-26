@@ -1,13 +1,5 @@
 import { useScreenSize } from "@/utils/hooks";
-import {
-  background,
-  Button,
-  Card,
-  Image,
-  Stack,
-  Text,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Button, Card, Image, Stack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React, { FC } from "react";
 
@@ -25,10 +17,6 @@ export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
   return (
     <Card
       sx={{
-        // width: { base: "100%"},
-        // maxWidth: { base: "100%" },
-        // height: (isDesktop || isTablet) && 400,
-        // maxHeight: (isDesktop || isTablet) && 400,
         height: "100%",
       }}
     >
@@ -51,7 +39,7 @@ export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
           </Text>
           <Text>{`${body.slice(0, 80)}...`}</Text>
         </Stack>
-        <Link href={`/informacije/${id}`}>
+        <Link href={`/informacije/objava?slug=${id}`}>
           <Button sx={{ width: "100%" }}>Прочитај више</Button>
         </Link>
       </Stack>
