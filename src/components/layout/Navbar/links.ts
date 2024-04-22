@@ -5,6 +5,7 @@ export interface NavItem {
   subLabel?: string;
   children?: Array<NavItem>;
   href?: string;
+  parent?: boolean;
 }
 
 export const NAV_ITEMS: Array<NavItem> = [
@@ -16,23 +17,19 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: "Службе",
     children: [
       {
-        label:
-          sluzbe.opsta_medicina.name,
+        label: sluzbe.opsta_medicina.name,
         href: `/sluzbe/${sluzbe.opsta_medicina.key}`,
       },
       {
-        label:
-          sluzbe.zz_dece_zena_i_dentalna_medicina.name,
+        label: sluzbe.zz_dece_zena_i_dentalna_medicina.name,
         href: `/sluzbe/${sluzbe.zz_dece_zena_i_dentalna_medicina.key}`,
       },
       {
-        label:
-          sluzbe.radiologija_laboratorija_i_specijalisticka_delatnost.name,
+        label: sluzbe.radiologija_laboratorija_i_specijalisticka_delatnost.name,
         href: `/sluzbe/${sluzbe.radiologija_laboratorija_i_specijalisticka_delatnost.key}`,
       },
       {
-        label:
-          sluzbe.pravno_ekonomsko_tehnicka.name,
+        label: sluzbe.pravno_ekonomsko_tehnicka.name,
         href: `/sluzbe/${sluzbe.pravno_ekonomsko_tehnicka.key}`,
       },
     ],
@@ -41,6 +38,7 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: "О нама",
     href: "/o_nama",
   },
+  { label: "Огласна табла", href: "/oglasna_tabla", parent: true },
   {
     label: "Остало",
     children: [

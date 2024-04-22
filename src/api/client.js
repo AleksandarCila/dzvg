@@ -5,4 +5,4 @@ const routes = [
   { type: 'obavestenje', path: '/:uid' },
 ]
 
-export const client = prismic.createClient(repositoryName, { routes })
+export const client = prismic.createClient(repositoryName)

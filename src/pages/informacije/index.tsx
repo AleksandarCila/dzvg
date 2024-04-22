@@ -8,7 +8,7 @@ import {
 import Head from "next/head";
 
 const Informacije = () => {
-  const { posts, loading } = useGetAllPosts();
+  const { data:posts, isLoading } = useGetAllPosts();
   return (
     <>
       <Head>
@@ -26,7 +26,7 @@ const Informacije = () => {
       </Head>
       <PageContainer>
         <Title title="Информације" />
-        <PostCardList loading={loading} posts={posts} />
+        <PostCardList loading={isLoading} posts={posts} />
       </PageContainer>
     </>
   );

@@ -31,7 +31,7 @@ export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <nav style={{boxShadow:"1px 2px 5px #00000040"}}>
+    <nav style={{ boxShadow: "1px 2px 5px #00000040" }}>
       <Flex
         bg={"white"}
         color={"gray.600"}
@@ -59,7 +59,7 @@ export const Navbar = () => {
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Link href="/" _hover={{ textDecoration: "none" }}>
-            <Text color={useColorModeValue("gray.800", "white")} fontSize='lg'>
+            <Text color={useColorModeValue("gray.800", "white")} fontSize="lg">
               Дом Здравља Велико Градиште
             </Text>
           </Link>
@@ -97,10 +97,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4} 
-    zIndex={20}
-    
-    >
+    <Stack direction={"row"} spacing={4} zIndex={20}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -110,7 +107,15 @@ const DesktopNav = () => {
                 href={navItem.href}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={pathname === navItem.href ? "primary.200" : linkColor}
+                color={
+                  navItem.parent
+                    ? navItem.href && pathname.includes(navItem.href)
+                      ? "primary.200"
+                      : linkColor
+                    : pathname === navItem.href
+                    ? "primary.200"
+                    : linkColor
+                }
                 _hover={{
                   textDecoration: "none",
                   color: linkHoverColor,

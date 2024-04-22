@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 const Informacija = () => {
   const router = useRouter();
   const { slug } = router.query;
-  const { post, loading } = useGetPostById(slug);
+  const { data: post, isLoading } = useGetPostById(slug);
 
   return (
     <>
@@ -27,7 +27,7 @@ const Informacija = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageContainer>
-        {!post || loading ? (
+        {!post || isLoading ? (
           <Progress size="xs" isIndeterminate colorScheme="orange" />
         ) : (
           <Stack

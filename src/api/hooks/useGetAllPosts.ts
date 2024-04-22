@@ -1,31 +1,33 @@
 //@ts-nocheck
 
-import { useEffect, useState } from "react";
 import { client } from "../client";
+import { useQuery } from "@tanstack/react-query";
+import * as prismic from "@prismicio/client";
 
-export const useGetAllPosts = () => {
-  const [loading, setLoading] = useState(true);
-  const [posts, setPosts] = useState([]);
-
+export const useGetAllPosts = (boardCategoryId?: string, enabled?: boolean) => {
   const fetchPosts = async () => {
     try {
-      setLoading(true);
-      const res = await client.getAllByType("obavestenje", {
-        orderings: "document.first_publication_date desc",
+      return await client.getAllByType("obavestenje", {
+        filters: boardCategoryId
+          ? [prismic.filter.at("my.obavestenje.category", boardCategoryId)]
+          : [],
+        orderings: {
+          field: "document.first_publication_date",
+          direction: "desc",
+        },
       });
-      setPosts(res);
     } catch (err) {
       console.log(err);
-    } finally {
-      setLoading(false);
     }
   };
 
-  useEffect(() => {
-    (async () => {
-      await fetchPosts();
-    })();
-  }, []);
-
-  return { posts, loading };
+  return useQuery({
+    queryKey: ["posts", { boardCategoryId }],
+    queryFn: fetchPosts,
+    staleTime: Infinity,
+    cacheTime: Infinity,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    enabled: enabled !== undefined ? enabled : true,
+  });
 };

@@ -1,21 +1,12 @@
 //@ts-nocheck
 import { useScreenSize } from "@/utils/hooks";
-import { Grid, GridItem, HStack, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Text } from "@chakra-ui/react";
 import React from "react";
-import { PostCard } from "./PostCard";
-import { PostCardSkeleton } from "./PostCardSkeleton";
+import { BoardCategoryCardSkeleton } from "./BoardCategoryCardSkeleton";
+import { BoardCategoryCard } from "./BoardCategoryCard";
 
-export const PostCardList = ({ posts, loading, limit }) => {
-  const postsSorted = posts?.sort((a, b) => {
-    const isAPinned = a?.tags?.includes("Bitno");
-    const isBPinned = b?.tags?.includes("Bitno");
-
-    if (isAPinned && !isBPinned) return -1;
-    if (!isAPinned && isBPinned) return 1;
-    return 0;
-  });
-
-  const postsToRender = limit ? postsSorted?.slice(0, limit) : posts;
+export const BoardCategoryList = ({ categories, loading, limit }) => {
+  const categoriesToRender = limit ? categories?.slice(0, limit) : categories;
   const { isDesktop, isTablet } = useScreenSize();
 
   const getGridColumns = () => {
@@ -37,22 +28,22 @@ export const PostCardList = ({ posts, loading, limit }) => {
     >
       {loading ? (
         <>
-          <PostCardSkeleton />
-          <PostCardSkeleton />
-          <PostCardSkeleton />
+          <BoardCategoryCardSkeleton />
+          <BoardCategoryCardSkeleton />
+          <BoardCategoryCardSkeleton />
         </>
       ) : (
         <>
-          {posts && posts.length > 0 ? (
-            postsToRender?.map((post) => {
-              const { title, image, body } = post.data;
+          {categories && categories.length > 0 ? (
+            categoriesToRender?.map((post) => {
+              const { naziv_kategorije: title, opis_kategorije: body } =
+                post.data;
               return (
                 <GridItem key={post.id}>
-                  <PostCard
+                  <BoardCategoryCard
                     id={post.uid}
                     title={title?.[0]?.text}
-                    image={image?.url}
-                    body={body?.[0]?.text}
+                    description={body?.[0]?.text}
                   />
                 </GridItem>
               );

@@ -37,7 +37,7 @@ export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
           <Text as="h2" fontSize={24}>
             {isDesktop || isTablet ? slicedTitle : title}
           </Text>
-          <Text>{`${body.slice(0, 80)}...`}</Text>
+          {body && <Text>{`${body.slice(0, 80)}...`}</Text>}
         </Stack>
         <Link href={`/informacije/objava?slug=${id}`}>
           <Button sx={{ width: "100%" }}>Прочитај више</Button>

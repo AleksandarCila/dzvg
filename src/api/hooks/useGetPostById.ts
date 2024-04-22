@@ -1,30 +1,21 @@
 //@ts-nocheck
 
-import { useEffect, useState } from "react";
 import { client } from "../client";
+import { useQuery } from "@tanstack/react-query";
 
 export const useGetPostById = (id: string) => {
-  const [loading, setLoading] = useState(true);
-  const [post, setPost] = useState();
-
   const fetchPost = async () => {
     try {
-      setLoading(true);
-      const res = await client.getByUID("obavestenje", id);
-      console.log(res);
-      setPost(res);
+      return await client.getByUID("obavestenje", id);
     } catch (err) {
       console.log(err);
-    } finally {
-      setLoading(false);
     }
   };
 
-  useEffect(() => {
-    (async () => {
-      if (id) await fetchPost();
-    })();
-  }, [id]);
-
-  return { post, loading };
+  return useQuery({
+    queryKey: ["post", { id }],
+    queryFn: fetchPost,
+    staleTime: Infinity,
+    cacheTime: Infinity,
+  });
 };

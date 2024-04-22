@@ -14,7 +14,7 @@ import Link from "next/link";
 import { useScreenSize } from "@/utils/hooks";
 
 export const Home = () => {
-  const { posts, loading } = useGetAllPosts();
+  const { data: posts, isLoading } = useGetAllPosts();
   const { isDesktop } = useScreenSize();
 
   return (
@@ -33,7 +33,7 @@ export const Home = () => {
         <ProveraLekaraSection />
         <Title title="Информације" />
         <PostCardList
-          loading={loading}
+          loading={isLoading}
           posts={posts}
           limit={isDesktop ? 6 : 3}
         />
