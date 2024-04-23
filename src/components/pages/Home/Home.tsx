@@ -31,6 +31,28 @@ export const Home = () => {
       <PageContainer>
         <SluzbeSection />
         <ProveraLekaraSection />
+        <Stack
+          sx={{
+            bg: "primary.500",
+            my: 5,
+            py: isDesktop ? 5 : 2,
+            borderRadius: isDesktop ? 25 : 0,
+          }}
+        >
+          <Title title="Огласна табла" invert size={isDesktop ? "lg" : "sm"} />
+          <Text sx={{ p: 5, color: "white" }} fontSize="xl">
+            Пронађите најновије информације на огласној табли
+          </Text>
+          <Link href="/oglasna_tabla" style={{ alignSelf: "center" }}>
+            <PrimaryButton
+              colorScheme="whiteAlpha"
+              variant="solid"
+              sx={{ mb: 4 }}
+            >
+              Огласна табла
+            </PrimaryButton>
+          </Link>
+        </Stack>
         <Title title="Информације" />
         <PostCardList
           loading={isLoading}
@@ -44,6 +66,7 @@ export const Home = () => {
               alignItems: "center",
               gap: 2,
               mt: 10,
+              p: isDesktop ? 0 : 5,
             }}
           >
             <Text fontSize={20}>За све информације и најновија обавештења</Text>

@@ -10,10 +10,14 @@ interface PostCardProps {
   body: string;
 }
 
-export const PostCard: FC<PostCardProps> = ({ id, title, image, body }) => {
+export const PostCard: FC<PostCardProps> = ({
+  id,
+  title,
+  image,
+  body,
+}) => {
   const slicedTitle = title.length > 30 ? `${title.slice(0, 30)}...` : title;
   const { isDesktop, isTablet } = useScreenSize();
-
   return (
     <Card
       sx={{

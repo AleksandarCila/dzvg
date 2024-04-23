@@ -11,6 +11,11 @@ const Informacija = () => {
   const { slug } = router.query;
   const { data: post, isLoading } = useGetPostById(slug);
 
+  const documents = [];
+  if (post?.data?.document_1) documents.push(post?.data.document_1);
+  if (post?.data?.document_2) documents.push(post?.data.document_2);
+  if (post?.data?.document_3) documents.push(post?.data.document_3);
+
   return (
     <>
       <Head>
@@ -95,6 +100,22 @@ const Informacija = () => {
                 </Text>
               );
             })}
+            {documents.length > 0 && (
+              <Stack>
+                <Text fontWeight={600} fontSize="2xl">
+                  Документи:
+                </Text>
+                {documents
+                  ?.filter((doc) => doc.url)
+                  ?.map((doc) => (
+                    <Link key={doc.id} target="_blank" href={doc.url}>
+                      <Text sx={{ textDecor: "underline" }}>
+                        {doc?.name ?? "Dokument"}
+                      </Text>
+                    </Link>
+                  ))}
+              </Stack>
+            )}
           </Stack>
         )}
       </PageContainer>

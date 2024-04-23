@@ -17,5 +17,6 @@ export const useGetPostById = (id: string) => {
     queryFn: fetchPost,
     staleTime: Infinity,
     cacheTime: Infinity,
+    enabled: Boolean(id),
   });
 };
