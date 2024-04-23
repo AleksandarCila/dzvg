@@ -49,7 +49,7 @@ export const BoardCategoryList = ({ categories, loading, limit }) => {
               );
             })
           ) : (
-            <Text>Нема обавештења</Text>
+            <Text>Огласна табла је тренутно празна!</Text>
           )}
         </>
       )}
