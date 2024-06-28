@@ -37,7 +37,7 @@ const KategorijaOglasneTable = () => {
         <Title
           title={`Огласна табла - ${categoryTitle ? categoryTitle : ""}`}
         />
-        <PostCardList loading={isLoading} posts={posts} />
+        <PostCardList loading={isLoading} posts={posts} board/>
       </PageContainer>
     </>
   );

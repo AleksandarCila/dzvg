@@ -5,8 +5,13 @@ import React from "react";
 import { PostCard } from "./PostCard";
 import { PostCardSkeleton } from "./PostCardSkeleton";
 
-export const PostCardList = ({ posts, loading, limit }) => {
-  const postsSorted = posts?.sort((a, b) => {
+export const PostCardList = ({ posts, loading, limit, board }) => {
+  const filteredPosts = posts?.filter((post) =>
+    board
+      ? post?.tags?.includes("OglasnaTabla")
+      : !post?.tags?.includes("OglasnaTabla")
+  );
+  const postsSorted = filteredPosts?.sort((a, b) => {
     const isAPinned = a?.tags?.includes("Bitno");
     const isBPinned = b?.tags?.includes("Bitno");
 
@@ -15,7 +20,7 @@ export const PostCardList = ({ posts, loading, limit }) => {
     return 0;
   });
 
-  const postsToRender = limit ? postsSorted?.slice(0, limit) : posts;
+  const postsToRender = limit ? postsSorted?.slice(0, limit) : filteredPosts;
   const { isDesktop, isTablet } = useScreenSize();
 
   const getGridColumns = () => {
@@ -43,7 +48,7 @@ export const PostCardList = ({ posts, loading, limit }) => {
         </>
       ) : (
         <>
-          {posts && posts.length > 0 ? (
+          {postsToRender && postsToRender.length > 0 ? (
             postsToRender?.map((post) => {
               const { title, image, body } = post.data;
               return (

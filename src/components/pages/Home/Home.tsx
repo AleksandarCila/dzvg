@@ -58,6 +58,7 @@ export const Home = () => {
           loading={isLoading}
           posts={posts}
           limit={isDesktop ? 6 : 3}
+          board={false}
         />
         {posts && posts?.length > 0 && (
           <Stack
